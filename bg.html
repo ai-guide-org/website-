@@ -154,5 +154,45 @@
             }, 100);
         });
     </script>
+<script>
+// Регистрация на Service Worker за PWA
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/ai-guide/service-worker.js')
+      .then(registration => {
+        console.log('ServiceWorker registered: ', registration.scope);
+      })
+      .catch(error => {
+        console.log('ServiceWorker registration failed: ', error);
+      });
+  });
+}
+
+// Показване на инсталационна подкана
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  
+  // Показване на бутон за инсталиране
+  const installButton = document.createElement('button');
+  installButton.className = 'primary-btn';
+  installButton.innerHTML = '📱 Инсталирай като приложение';
+  installButton.style.margin = '20px auto';
+  installButton.style.display = 'block';
+  installButton.onclick = () => {
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('User accepted install');
+      }
+      deferredPrompt = null;
+    });
+  };
+  
+  // Добавяне на бутона в края на страницата
+  document.querySelector('footer').appendChild(installButton);
+});
+</script>
 </body>
 </html>
