@@ -1,0 +1,58 @@
+{
+  "name": "AI Communication Guide",
+  "short_name": "AI Guide",
+  "description": "Complete guide for effective communication with AI assistants",
+  "start_url": "/ai-guide/",
+  "display": "standalone",
+  "background_color": "#f5f7fa",
+  "theme_color": "#4a6fa5",
+  "orientation": "portrait-primary",
+  "scope": "/ai-guide/",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["education", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Practice Prompts",
+      "short_name": "Practice",
+      "description": "Practice writing AI prompts",
+      "url": "/ai-guide/bg.html#practice",
+      "icons": [{ "src": "icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Learn Techniques",
+      "short_name": "Techniques",
+      "description": "Learn advanced AI techniques",
+      "url": "/ai-guide/bg.html#techniques",
+      "icons": [{ "src": "icon-192.png", "sizes": "192x192" }]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "screenshot-mobile.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ]
+}
