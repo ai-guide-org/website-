@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Генериране на иконки</title>
+    <style>
+        canvas { border: 1px solid #ccc; margin: 10px; }
+        button { padding: 10px; margin: 5px; }
+    </style>
+</head>
+<body>
+    <h2>Създай иконки за AI Guide</h2>
+    
+    <canvas id="icon192" width="192" height="192"></canvas>
+    <canvas id="icon512" width="512" height="512"></canvas>
+    
+    <div>
+        <button onclick="generateIcons()">🎨 Генерирай иконки</button>
+        <button onclick="downloadIcons()">📥 Изтегли иконки</button>
+    </div>
+    
+    <script>
+    function generateIcons() {
+        const colors = ['#4a6fa5', '#667eea', '#764ba2'];
+        const size192 = document.getElementById('icon192');
+        const size512 = document.getElementById('icon512');
+        
+        const ctx192 = size192.getContext('2d');
+        const ctx512 = size512.getContext('2d');
+        
+        // Иконка 192x192
+        ctx192.fillStyle = colors[0];
+        ctx192.fillRect(0, 0, 192, 192);
+        ctx192.fillStyle = 'white';
+        ctx192.font = 'bold 80px Arial';
+        ctx192.textAlign = 'center';
+        ctx192.textBaseline = 'middle';
+        ctx192.fillText('🤖', 96, 96);
+        
+        // Иконка 512x512
+        ctx512.fillStyle = colors[1];
+        ctx512.fillRect(0, 0, 512, 512);
+        ctx512.fillStyle = 'white';
+        ctx512.font = 'bold 200px Arial';
+        ctx512.textAlign = 'center';
+        ctx512.textBaseline = 'middle';
+        ctx512.fillText('🤖', 256, 256);
+        
+        // Добавяне на текст
+        ctx512.font = 'bold 40px Arial';
+        ctx512.fillText('AI Guide', 256, 380);
+    }
+    
+    function downloadIcons() {
+        const link192 = document.createElement('a');
+        link192.download = 'icon-192.png';
+        link192.href = document.getElementById('icon192').toDataURL();
+        link192.click();
+        
+        const link512 = document.createElement('a');
+        link512.download = 'icon-512.png';
+        link512.href = document.getElementById('icon512').toDataURL();
+        link512.click();
+    }
+    
+    // Автоматично генериране при зареждане
+    window.onload = generateIcons;
+    </script>
+</body>
+</html>
