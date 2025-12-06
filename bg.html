@@ -211,5 +211,66 @@ window.addEventListener('beforeinstallprompt', (e) => {
   document.querySelector('footer').appendChild(installButton);
 });
 </script>
+<script>
+// Регистрация на Service Worker за PWA
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/ai-guide/service-worker.js')
+      .then(registration => {
+        console.log('ServiceWorker регистриран успешно: ', registration.scope);
+      })
+      .catch(error => {
+        console.log('ServiceWorker регистрация неуспешна: ', error);
+      });
+  });
+}
+
+// Показване на инсталационна подкана за приложение
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  
+  // Създаване на бутон за инсталиране (само ако не съществува)
+  if (!document.getElementById('installButton')) {
+    const installButton = document.createElement('button');
+    installButton.id = 'installButton';
+    installButton.className = 'primary-btn';
+    installButton.innerHTML = '📱 Инсталирай като приложение';
+    installButton.style.margin = '20px auto';
+    installButton.style.display = 'block';
+    installButton.style.maxWidth = '300px';
+    installButton.onclick = () => {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            console.log('Потребителят прие инсталацията');
+            installButton.style.display = 'none';
+          }
+          deferredPrompt = null;
+        });
+      }
+    };
+    
+    // Добавяне на бутона преди футъра
+    const footer = document.querySelector('footer');
+    footer.parentNode.insertBefore(installButton, footer);
+    
+    // Автоматично скриване след 10 секунди
+    setTimeout(() => {
+      installButton.style.opacity = '0';
+      setTimeout(() => {
+        installButton.style.display = 'none';
+      }, 500);
+    }, 10000);
+  }
+});
+
+// Проверка дали приложението вече е инсталирано
+window.addEventListener('appinstalled', (evt) => {
+  console.log('AI Guide е инсталиран успешно');
+});
+</script>
 </body>
 </html>
