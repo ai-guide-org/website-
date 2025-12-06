@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+
+Sitemap: https://belene888.github.io/ai-guide/sitemap.xml
+
+# SEO оптимизации
+Crawl-delay: 2
