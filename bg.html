@@ -411,5 +411,51 @@ window.addEventListener('appinstalled', (evt) => {
     });
 })();
 </script>
+// Мобилно меню toggle
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+
+if (menuToggle) {
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+}
+
+// Затваряне на менюто при клик извън него
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('.main-nav') && navLinks.classList.contains('active')) {
+        menuToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+    }
+});
+
+// Dropdown мобилна функционалност
+document.querySelectorAll('.nav-dropdown .dropdown-toggle').forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+            const dropdown = toggle.parentElement;
+            dropdown.classList.toggle('active');
+            
+            // Затваряне на други dropdowns
+            document.querySelectorAll('.nav-dropdown').forEach(other => {
+                if (other !== dropdown) {
+                    other.classList.remove('active');
+                }
+            });
+        }
+    });
+});
+
+// Затваряне на менюто при клик на линк (на мобилни)
+document.querySelectorAll('.nav-link, .dropdown-item').forEach(link => {
+    link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+            menuToggle.classList.remove('active');
+            navLinks.classList.remove('active');
+        }
+    });
+});
 </body>
 </html>
