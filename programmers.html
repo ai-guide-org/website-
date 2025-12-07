@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI за програмисти - AI Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4a6fa5">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Специално ръководство за програмисти: Как да използваш AI за писане на код, дебагване, оптимизация и обучение.">
+    <meta name="keywords" content="програмиране, AI код, ChatGPT за разработчици, дебагване с AI, код генерация, Python, JavaScript, программисти">
+    <meta name="author" content="AI Guide Team">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="AI за програмисти - Пълно ръководство">
+    <meta property="og:description" content="Научи се да използваш AI за писане на по-добър код, по-бързо дебагване и по-ефективно обучение.">
+    <meta property="og:image" content="https://belene888.github.io/ai-guide/og-programmers.png">
+    <meta property="og:url" content="https://belene888.github.io/ai-guide/programmers.html">
+    <meta property="og:type" content="website">
+</head>
+<body>
+    <!-- Навигационно меню (същото като в другите страници) -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html" class="logo">🤖 AI Guide</a>
+            </div>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="Отвори/затвори меню">
+                <span class="hamburger"></span>
+            </button>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">🏠 Начало</a>
+                
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        📚 Ръководство
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="bg.html" class="dropdown-item">🎯 Основи на комуникацията</a>
+                        <a href="templates.html" class="dropdown-item">📋 Шаблони и примери</a>
+                        <a href="techniques.html" class="dropdown-item">🚀 Напреднали техники</a>
+                    </div>
+                </div>
+                
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        👥 За теб
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="programmers.html" class="dropdown-item active">💻 За програмисти</a>
+                        <a href="writers.html" class="dropdown-item">✍️ За писатели</a>
+                        <a href="students.html" class="dropdown-item">🎓 За студенти</a>
+                        <a href="business.html" class="dropdown-item">💼 За бизнес</a>
+                    </div>
+                </div>
+                
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        🛠️ Инструменти
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="prompt-analyzer.html" class="dropdown-item">🔍 Анализатор на промпт</a>
+                        <a href="code-generator.html" class="dropdown-item">💻 Генератор на код</a>
+                        <a href="debug-helper.html" class="dropdown-item">🐛 Помощник за дебагване</a>
+                    </div>
+                </div>
+                
+                <a href="resources.html" class="nav-link">📚 Ресурси</a>
+                
+                <div class="language-switcher-nav">
+                    <a href="programmers.html" class="lang-link active">🇧🇬</a>
+                    <a href="en/programmers.html" class="lang-link">🇬🇧</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="main-header">
+        <div class="container">
+            <h1>💻 AI за програмисти</h1>
+            <p class="subtitle">Научи се да използваш AI за писане на по-добър код, по-бързо дебагване и по-ефективно обучение</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Секция 1: Основни принципи -->
+        <div class="section fade-in">
+            <h2>🎯 Как да питаш AI за код?</h2>
+            
+            <div class="tip bad-example">
+                <h3>❌ Лош пример:</h3>
+                <p>"Напиши ми код за сайт"</p>
+                <p><em>Проблем:</em> Твърде общо. Какъв сайт? Какъв език? Какви функции?</p>
+            </div>
+            
+            <div class="tip good-example">
+                <h3>✅ Добър пример:</h3>
+                <p>"Създай React компонент на TypeScript за форма за регистрация с валидация. Включи: име, имейл, парола, потвърждение на парола. Добави стилове с Tailwind CSS."</p>
+                <p><em>Защо е добре:</em> Конкретен език, технологии, функционалности, стилове.</p>
+            </div>
+        </div>
+
+        <!-- Секция 2: Интерактивни инструменти -->
+        <div class="section fade-in">
+            <h2>🛠️ Интерактивни инструменти</h2>
+            
+            <!-- Инструмент 1: Генератор на код промптове -->
+            <div class="tool-card">
+                <h3>💻 Генератор на код промптове</h3>
+                <p>Създай перфектния промпт за твоя код:</p>
+                
+                <div class="form-group">
+                    <label for="language">Език за програмиране:</label>
+                    <select id="language" class="form-select">
+                        <option value="python">Python</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="typescript">TypeScript</option>
+                        <option value="java">Java</option>
+                        <option value="csharp">C#</option>
+                        <option value="php">PHP</option>
+                        <option value="other">Друг</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="task">Какво трябва да прави кодът?</label>
+                    <textarea id="task" class="form-textarea" placeholder="Например: 'функция която сортира масив', 'API endpoint за потребители', 'база данни за продукти'..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="requirements">Допълнителни изисквания:</label>
+                    <textarea id="requirements" class="form-textarea" placeholder="Например: 'използвай async/await', 'добави коментари', 'включи обработка на грешки'..."></textarea>
+                </div>
+                
+                <button class="primary-btn" onclick="generateCodePrompt()">🎯 Генерирай промпт</button>
+                
+                <div id="promptResult" class="result-box" style="display: none; margin-top: 20px;">
+                    <h4>📝 Готовият промпт:</h4>
+                    <pre id="generatedPrompt"></pre>
+                    <button class="copy-btn" onclick="copyGeneratedPrompt()">📋 Копирай промпт</button>
+                </div>
+            </div>
+            
+            <!-- Инструмент 2: Анализатор на код грешки -->
+            <div class="tool-card">
+                <h3>🔍 Анализатор на код грешки</h3>
+                <p>Постави грешката си тук и ще ти помогнем:</p>
+                
+                <div class="form-group">
+                    <label for="errorCode">Твоят код (с грешка):</label>
+                    <textarea id="errorCode" class="form-textarea code-textarea" placeholder="Постави кода тук..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="errorMessage">Грешката, която получаваш:</label>
+                    <textarea id="errorMessage" class="form-textarea" placeholder="Например: 'TypeError: Cannot read property...', 'SyntaxError: Unexpected token...'"></textarea>
+                </div>
+                
+                <button class="primary-btn" onclick="analyzeCodeError()">🔍 Анализирай грешка</button>
+                
+                <div id="errorResult" class="result-box" style="display: none; margin-top: 20px;">
+                    <h4>💡 Предположения за грешката:</h4>
+                    <div id="errorAnalysis"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Секция 3: Шаблони за код -->
+        <div class="section fade-in">
+            <h2>📚 Шаблони за код</h2>
+            <p>Готови формулировки за чести задачи:</p>
+            
+            <div class="templates-grid">
+                <!-- Шаблон 1: Функция -->
+                <div class="template-card" data-category="function">
+                    <div class="template-header">
+                        <span class="template-category">⚙️ Функция</span>
+                        <button class="copy-btn" data-template="codeTemplate1">📋 Копирай</button>
+                    </div>
+                    <h3 class="template-title">Създаване на функция</h3>
+                    <div class="template-code">
+                        <pre><code id="codeTemplate1">Създай функция на [език], която [какво прави функцията].
+                        
+Изисквания:
+- Входни параметри: [списък]
+- Връщана стойност: [тип]
+- Сложност: [O(n), O(log n), и т.н.]
+- Обработка на грешки: [какво да прави при грешка]
+
+Добави:
+- Коментари за обяснение
+- Пример за използване
+- Тестови случаи</code></pre>
+                    </div>
+                </div>
+                
+                <!-- Шаблон 2: API Endpoint -->
+                <div class="template-card" data-category="api">
+                    <div class="template-header">
+                        <span class="template-category">🌐 API</span>
+                        <button class="copy-btn" data-template="codeTemplate2">📋 Копирай</button>
+                    </div>
+                    <h3 class="template-title">Създаване на API endpoint</h3>
+                    <div class="template-code">
+                        <pre><code id="codeTemplate2">Създай [GET/POST/PUT/DELETE] API endpoint за [ресурс].
+
+Спецификации:
+- Framework: [Express.js/FastAPI/Django и т.н.]
+- База данни: [MongoDB/PostgreSQL/MySQL]
+- Автентикация: [JWT/OAuth/None]
+- Валидация: [какви полета, какви правила]
+
+Включи:
+- Маршрут и параметри
+- Бизнес логика
+- Обработка на грешки
+- Отговор в JSON формат
+- Тестов пример с curl</code></pre>
+                    </div>
+                </div>
+                
+                <!-- Шаблон 3: Дебагване -->
+                <div class="template-card" data-category="debug">
+                    <div class="template-header">
+                        <span class="template-category">🐛 Дебагване</span>
+                        <button class="copy-btn" data-template="codeTemplate3">📋 Копирай</button>
+                    </div>
+                    <h3 class="template-title">Дебагване на код</h3>
+                    <div class="template-code">
+                        <pre><code id="codeTemplate3">Трябва да дебъгна следния код:
+[постави кода тук]
+
+Грешката, която получавам е:
+[опиши грешката]
+
+Опитах следните неща:
+1. [първо решение]
+2. [второ решение]
+3. [трето решение]
+
+Можеш ли да:
+1. Обясниш вероятната причина?
+2. Предложиш решение?
+3. Дадеш съвет как да предотвратя подобни грешки?</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Секция 4: Практически съвети -->
+        <div class="section fade-in">
+            <h2>💡 Практически съвети за програмисти</h2>
+            
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <h3>1. Бъди конкретен с версиите</h3>
+                    <p>"Python 3.9+" вместо "Python"<br>"React 18 с hooks" вместо "React"</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h3>2. Посочвай библиотеки</h3>
+                    <p>"използвай pandas за анализ"<br>"стилове с Bootstrap 5"</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h3>3. Давай контекст</h3>
+                    <p>"това е за уеб приложение"<br>"работи в Docker контейнер"</p>
+                </div>
+                
+                <div class="tip-card">
+                    <h3>4. Искай обяснения</h3>
+                    <p>"обясни ми стъпка по стъпка"<br>"защо този подход е по-добър?"</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Навигация -->
+        <div class="section">
+            <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+                <a href="templates.html" class="secondary-btn">← Назад към шаблоните</a>
+                <a href="bg.html" class="secondary-btn">📚 Основното ръководство →</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>AI Guide за програмисти &copy; 2024</p>
+            <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.7;">
+                Създадено от разработчици за разработчици 💻
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript за тази страница -->
+    <script>
+        // Генератор на код промптове
+        function generateCodePrompt() {
+            const language = document.getElementById('language').value;
+            const task = document.getElementById('task').value;
+            const requirements = document.getElementById('requirements').value;
+            
+            if (!task.trim()) {
+                alert('Моля, опиши какво трябва да прави кодът!');
+                return;
+            }
+            
+            let prompt = `Създай код на ${language}, който:\n${task}\n\n`;
+            
+            if (requirements.trim()) {
+                prompt += `Допълнителни изисквания:\n${requirements}\n\n`;
+            }
+            
+            prompt += `Моля, включи:\n`;
+            prompt += `1. Пълния код с коментари\n`;
+            prompt += `2. Обяснение на ключовите части\n`;
+            prompt += `3. Пример за използване\n`;
+            prompt += `4. Потенциални проблеми и решения\n`;
+            
+            document.getElementById('generatedPrompt').textContent = prompt;
+            document.getElementById('promptResult').style.display = 'block';
+            
+            // Скрол до резултата
+            document.getElementById('promptResult').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Копиране на генерирания промпт
+        function copyGeneratedPrompt() {
+            const promptText = document.getElementById('generatedPrompt').textContent;
+            navigator.clipboard.writeText(promptText).then(() => {
+                const btn = event.target;
+                const originalText = btn.textContent;
+                btn.textContent = '✅ Копирано!';
+                btn.style.background = 'var(--success-color)';
+                
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.style.background = '';
+                }, 2000);
+            });
+        }
+        
+        // Анализатор на код грешки
+        function analyzeCodeError() {
+            const code = document.getElementById('errorCode').value;
+            const error = document.getElementById('errorMessage').value;
+            
+            if (!code.trim() && !error.trim()) {
+                alert('Моля, въведи код или описание на грешката!');
+                return;
+            }
+            
+            let analysis = '<ul style="padding-left: 20px;">';
+            
+            if (error.toLowerCase().includes('typeerror')) {
+                analysis += '<li><strong>TypeError:</strong> Провери типовете на променливите и дали са дефинирани</li>';
+            }
+            if (error.toLowerCase().includes('syntaxerror')) {
+                analysis += '<li><strong>SyntaxError:</strong> Провери липсващи скоби, кавички или точки и запетая</li>';
+            }
+            if (error.toLowerCase().includes('referenceerror')) {
+                analysis += '<li><strong>ReferenceError:</strong> Променливата вероятно не е дефинирана или е извън обхват</li>';
+            }
+            if (code.includes('async') && !code.includes('await')) {
+                analysis += '<li><strong>Async/Await:</strong> Ако използваш async функция, не забравяй await за promises</li>';
+            }
+            if (code.includes('document.') && !code.includes('DOMContentLoaded')) {
+                analysis += '<li><strong>DOM Грешка:</strong> Увери се, че DOM е зареден преди да манипулираш елементи</li>';
+            }
+            
+            analysis += '<li><strong>Общ съвет:</strong> Провери конзолата за повече детайли и Google грешката</li>';
+            analysis += '</ul>';
+            
+            document.getElementById('errorAnalysis').innerHTML = analysis;
+            document.getElementById('errorResult').style.display = 'block';
+            
+            // Скрол до резултата
+            document.getElementById('errorResult').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Копиране на шаблони за код
+        document.querySelectorAll('.template-card .copy-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const templateId = this.getAttribute('data-template');
+                const templateText = document.getElementById(templateId).textContent;
+                
+                navigator.clipboard.writeText(templateText).then(() => {
+                    const originalText = this.textContent;
+                    this.textContent = '✅ Копирано!';
+                    this.style.background = 'var(--success-color)';
+                    
+                    setTimeout(() => {
+                        this.textContent = originalText;
+                        this.style.background = '';
+                    }, 2000);
+                });
+            });
+        });
+        
+        // Мобилно меню (същото като в другите страници)
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+        }
+    </script>
+    
+    <!-- Стилове специфични за тази страница -->
+    <style>
+        /* Стилове за инструменти */
+        .tool-card {
+            background: var(--bg-white);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--primary-color);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+        
+        .form-select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e8e8e8;
+            border-radius: 8px;
+            font-size: 16px;
+            background: white;
+            transition: var(--transition);
+        }
+        
+        .form-select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+        
+        .form-textarea {
+            width: 100%;
+            min-height: 100px;
+            padding: 15px;
+            border: 2px solid #e8e8e8;
+            border-radius: 10px;
+            font-size: 16px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            resize: vertical;
+            transition: var(--transition);
+        }
+        
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(74, 111, 165, 0.1);
+        }
+        
+        .code-textarea {
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        /* Грид за съвети */
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .tip-card {
+            background: var(--bg-light);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid var(--info-color);
+        }
+        
+        .tip-card h3 {
+            margin-bottom: 10px;
+            color: var(--primary-dark);
+        }
+        
+        /* Адаптивност */
+        @media (max-width: 768px) {
+            .templates-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .tips-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .tool-card {
+                padding: 15px;
+            }
+        }
+        
+        /* Тъмен режим */
+        .dark-mode .tool-card {
+            background: var(--bg-white);
+            border-left-color: #555;
+        }
+        
+        .dark-mode .form-select,
+        .dark-mode .form-textarea {
+            background: #2d2d2d;
+            border-color: #555;
+            color: white;
+        }
+        
+        .dark-mode .tip-card {
+            background: #2d2d2d;
+        }
+    </style>
+</body>
+</html>
