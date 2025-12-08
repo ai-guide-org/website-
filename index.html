@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Communication Guide - Master Prompt Engineering & AI Assistant Communication</title>
+    
+    <!-- Meta tags for SEO and social sharing -->
+    <meta name="description" content="Learn how to communicate effectively with AI assistants like ChatGPT, Claude, Gemini. Complete guide to prompt engineering with practical examples, templates, and interactive tools.">
+    <meta name="keywords" content="AI communication, prompt engineering, ChatGPT guide, AI assistant tips, prompt templates, how to talk to AI, effective AI prompts, Claude, Gemini, AI tutorials">
+    <meta name="author" content="AI Guide Team">
+    <meta property="og:title" content="AI Communication Guide - Master Prompt Engineering">
+    <meta property="og:description" content="Free guide to effective communication with AI assistants. Learn techniques, templates, and best practices.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/667eea/ffffff?text=AI+Communication+Guide">
+    <meta property="og:type" content="website">
+    
+    <!-- PWA and styling -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+    <meta name="theme-color" content="#4a6fa5">
+    
+    <!-- Additional styles for homepage only -->
+    <style>
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
+        
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
+            text-align: center;
+            line-height: 1.6;
+        }
+        
+        .container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 40px 20px; 
+        }
+        
+        /* Header styles */
+        header { 
+            padding: 80px 20px 60px; 
+            animation: fadeIn 1s ease-out;
+        }
+        
+        h1 { 
+            font-size: clamp(2.5em, 5vw, 3.8em); 
+            margin-bottom: 20px; 
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            line-height: 1.2;
+        }
+        
+        .subtitle { 
+            font-size: clamp(1.1em, 2.5vw, 1.5em); 
+            opacity: 0.9; 
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Language selector */
+        .language-selector { 
+            margin: 40px 0; 
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.95);
+            color: #667eea;
+            border: none;
+            padding: 18px 35px;
+            border-radius: 50px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            min-width: 200px;
+            justify-content: center;
+        }
+        
+        .lang-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            background: white;
+        }
+        
+        .lang-btn:active {
+            transform: translateY(-2px);
+        }
+        
+        /* Quick links section */
+        .quick-links {
+            margin: 50px 0 40px;
+            animation: fadeIn 1.2s ease-out;
+        }
+        
+        .quick-links h3 {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+        
+        .quick-link-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .quick-link {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 14px 28px;
+            border-radius: 25px;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            font-weight: 500;
+            flex: 1;
+            min-width: 180px;
+            max-width: 250px;
+        }
+        
+        .quick-link:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Features section */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 70px 0 50px;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 35px 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s;
+            text-align: left;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-8px);
+        }
+        
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .feature-card p {
+            opacity: 0.9;
+            font-size: 1.05em;
+        }
+        
+        /* Footer */
+        footer {
+            margin-top: 80px;
+            padding: 40px 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            animation: fadeIn 1.5s ease-out;
+        }
+        
+        .footer-features {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+        
+        /* Skip intro button */
+        .skip-intro {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: all 0.3s;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+        
+        .skip-intro:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        /* Loading indicator */
+        .loading-indicator {
+            display: none;
+            margin-top: 20px;
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+        
+        .loading-indicator.active {
+            display: block;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { 
+                opacity: 0; 
+                transform: translateY(20px); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0); 
+            }
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            header { 
+                padding: 60px 20px 40px; 
+            }
+            
+            .lang-btn {
+                padding: 16px 30px;
+                min-width: 180px;
+                font-size: 1em;
+            }
+            
+            .language-selector {
+                gap: 15px;
+            }
+            
+            .quick-link {
+                min-width: 150px;
+                padding: 12px 20px;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                margin: 50px 0;
+            }
+            
+            .feature-card {
+                padding: 25px;
+            }
+            
+            .skip-intro {
+                top: 10px;
+                right: 10px;
+                font-size: 0.8em;
+                padding: 8px 16px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .lang-btn {
+                min-width: 100%;
+                max-width: 300px;
+            }
+            
+            .quick-link-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .quick-link {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip intro button -->
+    <a href="#main-content" class="skip-intro" id="skipIntro">Skip to content</a>
+    
+    <!-- Navigation Menu (same as other pages) -->
+    <nav class="main-nav" aria-label="Main Navigation">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html" class="logo">🤖 AI Guide</a>
+            </div>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="Open/Close menu" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link active" aria-current="page">🏠 Home</a>
+                
+                <!-- Main Guide -->
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        📚 Guide
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="en.html#basics" class="dropdown-item">🎯 Communication Basics</a>
+                        <a href="templates.html" class="dropdown-item">📋 Templates & Examples</a>
+                        <a href="en.html#advanced" class="dropdown-item">🚀 Advanced Techniques</a>
+                    </div>
+                </div>
+                
+                <!-- For Specific Groups -->
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        👥 For You
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="programmers.html" class="dropdown-item">💻 For Programmers</a>
+                        <a href="writers.html" class="dropdown-item">✍️ For Writers</a>
+                        <a href="students.html" class="dropdown-item">🎓 For Students</a>
+                        <a href="business.html" class="dropdown-item">💼 For Business</a>
+                    </div>
+                </div>
+                
+                <!-- Tools -->
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        🛠️ Tools
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="prompt-analyzer.html" class="dropdown-item">🔍 Prompt Analyzer</a>
+                        <a href="prompt-builder.html" class="dropdown-item">🏗️ Prompt Builder</a>
+                        <a href="practice.html" class="dropdown-item">🧪 Practice</a>
+                    </div>
+                </div>
+                
+                <!-- Resources -->
+                <a href="resources.html" class="nav-link">📚 Resources</a>
+                
+                <!-- Language Switcher -->
+                <div class="language-switcher-nav">
+                    <a href="index.html" class="lang-link" aria-label="Switch to English">🇬🇧</a>
+                    <a href="bg.html" class="lang-link active" aria-label="Switch to Bulgarian">🇧🇬</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content" class="container">
+        <header>
+            <h1>🤖 AI Communication Guide</h1>
+            <p class="subtitle">
+                Master the art of communicating with AI assistants. Learn prompt engineering techniques, 
+                best practices, and practical strategies to get better results from ChatGPT, Claude, Gemini, and other AI tools.
+            </p>
+            
+            <!-- Language Selector -->
+            <div class="language-selector">
+                <button class="lang-btn" onclick="selectLanguage('bg')" aria-label="Select Bulgarian language">
+                    <span role="img" aria-label="Bulgarian flag">🇧🇬</span>
+                    <span>Българска версия</span>
+                </button>
+                <button class="lang-btn" onclick="selectLanguage('en')" aria-label="Select English language">
+                    <span role="img" aria-label="English flag">🇬🇧</span>
+                    <span>English Version</span>
+                </button>
+            </div>
+            
+            <!-- Loading Indicator -->
+            <div class="loading-indicator" id="loadingIndicator">
+                <p>Redirecting in 3 seconds... <span class="loader"></span></p>
+            </div>
+            
+            <p style="opacity: 0.8; font-size: 1.1em; margin-top: 20px;">
+                Select your language to continue. The site will remember your choice for next time.
+            </p>
+        </header>
+        
+        <!-- Quick Links Section -->
+        <div class="quick-links">
+            <h3>⏩ Jump to popular sections:</h3>
+            <div class="quick-link-grid">
+                <a href="en.html#basics" class="quick-link">📖 Communication Basics</a>
+                <a href="templates.html" class="quick-link">📋 Prompt Templates</a>
+                <a href="prompt-builder.html" class="quick-link">🏗️ Prompt Builder Tool</a>
+                <a href="en.html#mistakes" class="quick-link">⚠️ Common Mistakes</a>
+            </div>
+        </div>
+        
+        <!-- Features Section -->
+        <div class="features">
+            <div class="feature-card">
+                <h3><span role="img" aria-label="Target">🎯</span> Effective Communication</h3>
+                <p>Learn the fundamental principles of clear and effective communication with AI assistants. Understand how to structure your requests for optimal results.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3><span role="img" aria-label="Rocket">🚀</span> Advanced Techniques</h3>
+                <p>Master prompt engineering, role-playing, chain-of-thought, and other advanced techniques used by AI professionals to achieve superior outcomes.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3><span role="img" aria-label="Light bulb">💡</span> Practical Examples</h3>
+                <p>Access ready-to-use templates and real-world examples that you can copy, adapt, and apply immediately to your projects and tasks.</p>
+            </div>
+        </div>
+        
+        <!-- Additional Info -->
+        <div style="max-width: 800px; margin: 0 auto 40px; padding: 30px; background: rgba(255,255,255,0.05); border-radius: 15px;">
+            <h3 style="margin-bottom: 15px; font-size: 1.3em;">✨ What You'll Learn:</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; text-align: left;">
+                <div style="display: flex; align-items: flex-start; gap: 10px;">
+                    <span style="opacity: 0.8;">✓</span>
+                    <span>How to write clear, specific prompts</span>
+                </div>
+                <div style="display: flex; align-items: flex-start; gap: 10px;">
+                    <span style="opacity: 0.8;">✓</span>
+                    <span>Techniques for complex problem-solving</span>
+                </div>
+                <div style="display: flex; align-items: flex-start; gap: 10px;">
+                    <span style="opacity: 0.8;">✓</span>
+                    <span>Understanding AI limitations and capabilities</span>
+                </div>
+                <div style="display: flex; align-items: flex-start; gap: 10px;">
+                    <span style="opacity: 0.8;">✓</span>
+                    <span>Tools to analyze and improve your prompts</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <footer>
+            <p style="font-size: 1.1em; margin-bottom: 15px;">
+                This comprehensive guide helps you unlock the full potential of AI assistants through better communication.
+            </p>
+            <div class="footer-features">
+                <span>🌐 Works offline</span>
+                <span>📱 Installable as app</span>
+                <span>🆓 Free forever</span>
+                <span>🔒 No tracking</span>
+            </div>
+            <p style="margin-top: 25px; font-size: 0.9em; opacity: 0.7;">
+                Made with ❤️ for the AI community | Last updated: 2024
+            </p>
+        </footer>
+    </main>
+
+    <!-- JavaScript -->
+    <script>
+        // Language selection function
+        function selectLanguage(lang) {
+            const loadingIndicator = document.getElementById('loadingIndicator');
+            const skipIntro = document.getElementById('skipIntro');
+            
+            // Show loading indicator
+            loadingIndicator.classList.add('active');
+            loadingIndicator.innerHTML = `<p>Redirecting to ${lang === 'bg' ? 'Bulgarian' : 'English'} version... <span style="display:inline-block; animation: spin 1s linear infinite;">⏳</span></p>`;
+            
+            // Save preference
+            localStorage.setItem('preferred-language', lang);
+            localStorage.setItem('language-selected', 'true');
+            
+            // Redirect after delay
+            setTimeout(() => {
+                window.location.href = lang === 'bg' ? 'bg.html' : 'en.html';
+            }, 1000);
+        }
+        
+        // Auto-redirect based on saved preference or browser language
+        window.addEventListener('DOMContentLoaded', () => {
+            const skipIntro = document.getElementById('skipIntro');
+            const preferredLang = localStorage.getItem('preferred-language');
+            const languageSelected = localStorage.getItem('language-selected');
+            const userLang = navigator.language || navigator.userLanguage;
+            
+            // If user has already selected a language before, redirect immediately
+            if (languageSelected && preferredLang) {
+                setTimeout(() => {
+                    window.location.href = preferredLang + '.html';
+                }, 500);
+                return;
+            }
+            
+            // If no saved preference, check browser language
+            if (!languageSelected) {
+                // Redirect after 8 seconds if user doesn't interact
+                const redirectTimer = setTimeout(() => {
+                    if (userLang.startsWith('bg')) {
+                        selectLanguage('bg');
+                    } else {
+                        selectLanguage('en');
+                    }
+                }, 8000);
+                
+                // Clear timer if user interacts
+                document.addEventListener('click', () => clearTimeout(redirectTimer));
+                document.addEventListener('keydown', () => clearTimeout(redirectTimer));
+            }
+        });
+        
+        // Navigation menu toggle (if needed)
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (menuToggle && navLinks) {
+                menuToggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                    menuToggle.setAttribute('aria-expanded', 
+                        navLinks.classList.contains('active') ? 'true' : 'false'
+                    );
+                });
+            }
+            
+            // Skip intro functionality
+            const skipIntroBtn = document.getElementById('skipIntro');
+            if (skipIntroBtn) {
+                skipIntroBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    selectLanguage('en'); // Default to English when skipping
+                });
+            }
+        });
+        
+        // Add CSS for spinner
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
