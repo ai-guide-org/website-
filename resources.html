@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Ресурси - Полезни инструменти и материали</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4a6fa5">
+</head>
+<body>
+    <!-- НАВИГАЦИОННО МЕНЮ -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html" class="logo">🤖 AI Guide</a>
+            </div>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="Отвори/затвори меню">
+                <span class="hamburger"></span>
+            </button>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">🏠 Начало</a>
+                
+                <!-- Основно ръководство -->
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        📚 Ръководство
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="bg.html" class="dropdown-item">🎯 Основи на комуникацията</a>
+                        <a href="templates.html" class="dropdown-item">📋 Шаблони и примери</a>
+                        <a href="bg.html#advanced" class="dropdown-item">🚀 Напреднали техники</a>
+                    </div>
+                </div>
+                
+                <!-- За специфични групи -->
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        👥 За теб
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="programmers.html" class="dropdown-item">💻 За програмисти</a>
+                        <a href="writers.html" class="dropdown-item">✍️ За писатели</a>
+                        <a href="students.html" class="dropdown-item">🎓 За студенти</a>
+                        <a href="business.html" class="dropdown-item">💼 За бизнес</a>
+                    </div>
+                </div>
+                
+                <!-- Инструменти -->
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        🛠️ Инструменти
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="prompt-analyzer.html" class="dropdown-item">🔍 Анализатор на промпт</a>
+                        <a href="prompt-builder.html" class="dropdown-item">🏗️ Създател на промпт</a>
+                        <a href="practice.html" class="dropdown-item">🧪 Практикувай</a>
+                    </div>
+                </div>
+                
+                <!-- Ресурси -->
+                <a href="resources.html" class="nav-link active">📚 Ресурси</a>
+                
+                <!-- Език -->
+                <div class="language-switcher-nav">
+                    <a href="resources.html" class="lang-link active">🇧🇬</a>
+                    <a href="en.html" class="lang-link">🇬🇧</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="language-switcher">
+                <button class="lang-btn" onclick="window.location.href='en.html'">
+                    <span>🇬🇧</span>
+                    <span>English</span>
+                </button>
+            </div>
+            <h1>📚 AI Ресурси и Инструменти</h1>
+            <p class="subtitle">Полезни линкове, инструменти и материали за работа с изкуствен интелект</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Секция 1: AI Платформи -->
+        <div class="section fade-in">
+            <h2>🤖 AI Платформи и Инструменти</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px;">
+                
+                <div class="resource-card" style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 25px; border-radius: 15px;">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                        <span style="font-size: 2em;">⚡</span>
+                        <div>
+                            <h3 style="margin: 0; color: white;">ChatGPT</h3>
+                            <p style="opacity: 0.9; margin: 5px 0 0 0;">OpenAI</p>
+                        </div>
+                    </div>
+                    <p>Най-популярният AI асистент за обща употреба. Поддържа разговори, писане на код, анализ и творчески задачи.</p>
+                    <a href="https://chat.openai.com" target="_blank" style="display: inline-block; background: white; color: #667eea; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: bold; margin-top: 15px;">Посети сайта</a>
+                </div>
+                
+                <div class="resource-card" style="background: linear-gradient(135deg, #10b981, #047857); color: white; padding: 25px; border-radius: 15px;">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                        <span style="font-size: 2em;">💎</span>
+                        <div>
+                            <h3 style="margin: 0; color: white;">Claude</h3>
+                            <p style="opacity: 0.9; margin: 5px 0 0 0;">Anthropic</p>
+                        </div>
+                    </div>
+                    <p>AI асистент фокусиран върху безопасност и етика. Отличен за анализ на документи и подробни разговори.</p>
+                    <a href="https://claude.ai" target="_blank" style="display: inline-block; background: white; color: #10b981; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: bold; margin-top: 15px;">Посети сайта</a>
+                </div>
+                
+                <div class="resource-card" style="background: linear-gradient(135deg, #3b82f6, #1d4ed8); color: white; padding: 25px; border-radius: 15px;">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                        <span style="font-size: 2em;">🧠</span>
+                        <div>
+                            <h3 style="margin: 0; color: white;">Gemini</h3>
+                            <p style="opacity: 0.9; margin: 5px 0 0 0;">Google</p>
+                        </div>
+                    </div>
+                    <p>Google's AI асистент с интеграция в търсачката. Силно в анализ на изображения и мултимодални задачи.</p>
+                    <a href="https://gemini.google.com" target="_blank" style="display: inline-block; background: white; color: #3b82f6; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: bold; margin-top: 15px;">Посети сайта</a>
+                </div>
+            </div>
+            
+            <!-- Допълнителни инструменти -->
+            <div style="margin-top: 30px;">
+                <h3>🔧 Други полезни инструменти:</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 15px;">
+                    <div style="background: #f8f9fa; padding: 15px; border-radius: 10px;">
+                        <h4>🎨 Midjourney</h4>
+                        <p>AI за генериране на изображения</p>
+                    </div>
+                    <div style="background: #f8f9fa; padding: 15px; border-radius: 10px;">
+                        <h4>🎵 Suno AI</h4>
+                        <p>Генериране на музика с AI</p>
+                    </div>
+                    <div style="background: #f8f9fa; padding: 15px; border-radius: 10px;">
+                        <h4>📊 Perplexity AI</h4>
+                        <p>AI търсачка с източници</p>
+                    </div>
+                    <div style="background: #f8f9fa; padding: 15px; border-radius: 10px;">
+                        <h4>💻 GitHub Copilot</h4>
+                        <p>AI помощник за програмисти</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Секция 2: Образователни ресурси -->
+        <div class="section fade-in">
+            <h2>🎓 Образователни ресурси</h2>
+            
+            <div class="resource-category">
+                <h3>📚 Онлайн курсове</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 15px;">
+                    <a href="https://www.deeplearning.ai" target="_blank" class="resource-link">
+                        <span>🎯</span>
+                        <div>
+                            <strong>DeepLearning.AI</strong>
+                            <p>Курсове от Andrew Ng</p>
+                        </div>
+                    </a>
+                    <a href="https://www.coursera.org/specializations/deep-learning" target="_blank" class="resource-link">
+                        <span>🧠</span>
+                        <div>
+                            <strong>Coursera</strong>
+                            <p>Deep Learning специализация</p>
+                        </div>
+                    </a>
+                    <a href="https://www.udacity.com/school-of-ai" target="_blank" class="resource-link">
+                        <span>🚀</span>
+                        <div>
+                            <strong>Udacity</strong>
+                            <p>AI наностепени</p>
+                        </div>
+                    </a>
+                    <a href="https://www.fast.ai" target="_blank" class="resource-link">
+                        <span>⚡</span>
+                        <div>
+                            <strong>Fast.ai</strong>
+                            <p>Практични курсове</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="resource-category" style="margin-top: 30px;">
+                <h3>📖 Книги и статии</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 15px;">
+                    <div style="background: #fff7e6; padding: 20px; border-radius: 10px;">
+                        <h4>🤖 "AI Superpowers"</h4>
+                        <p>Кай-Фу Лий - AI в Китай и САЩ</p>
+                    </div>
+                    <div style="background: #e7f3ff; padding: 20px; border-radius: 10px;">
+                        <h4>🎯 "The Age of AI"</h4>
+                        <p>Хенри Кисинджър - AI и геополитика</p>
+                    </div>
+                    <div style="background: #f0ffe6; padding: 20px; border-radius: 10px;">
+                        <h4>💡 "Life 3.0"</h4>
+                        <p>Макс Тегмарк - AI и бъдещето</p>
+                    </div>
+                    <div style="background: #ffe6e6; padding: 20px; border-radius: 10px;">
+                        <h4>📊 "Human Compatible"</h4>
+                        <p>Стюарт Ръсел - AI и човечеството</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Секция 3: Софтуер и библиотеки -->
+        <div class="section fade-in">
+            <h2>💻 Софтуер и Библиотеки</h2>
+            
+            <div class="tech-stack">
+                <h3>🐍 Python библиотеки</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px;">
+                    <span class="tech-tag">TensorFlow</span>
+                    <span class="tech-tag">PyTorch</span>
+                    <span class="tech-tag">LangChain</span>
+                    <span class="tech-tag">OpenAI API</span>
+                    <span class="tech-tag">Hugging Face</span>
+                    <span class="tech-tag">Scikit-learn</span>
+                    <span class="tech-tag">Pandas</span>
+                    <span class="tech-tag">NumPy</span>
+                </div>
+            </div>
+            
+            <div class="tech-stack" style="margin-top: 25px;">
+                <h3>🛠️ Инструменти за разработка</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 15px;">
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; text-align: center;">
+                        <span style="font-size: 2em;">🔧</span>
+                        <h4>VS Code</h4>
+                        <p>Текстов редактор с AI разширения</p>
+                    </div>
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; text-align: center;">
+                        <span style="font-size: 2em;">📦</span>
+                        <h4>Jupyter</h4>
+                        <p>Интерактивни тетрадки за AI</p>
+                    </div>
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; text-align: center;">
+                        <span style="font-size: 2em;">☁️</span>
+                        <h4>Google Colab</h4>
+                        <p>Безплатни GPU за обучение</p>
+                    </div>
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; text-align: center;">
+                        <span style="font-size: 2em;">🚀</span>
+                        <h4>GitHub</h4>
+                        <p>Код и AI проекти</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Секция 4: Общност и блогове -->
+        <div class="section fade-in">
+            <h2>👥 Общност и Блогове</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px;">
+                
+                <div style="border: 2px solid #e7f3ff; padding: 20px; border-radius: 10px;">
+                    <h3>🌐 Reddit общности</h3>
+                    <ul style="margin: 15px 0 0 20px;">
+                        <li><a href="https://reddit.com/r/MachineLearning" target="_blank">r/MachineLearning</a></li>
+                        <li><a href="https://reddit.com/r/artificial" target="_blank">r/artificial</a></li>
+                        <li><a href="https://reddit.com/r/OpenAI" target="_blank">r/OpenAI</a></li>
+                        <li><a href="https://reddit.com/r/LocalLLaMA" target="_blank">r/LocalLLaMA</a></li>
+                    </ul>
+                </div>
+                
+                <div style="border: 2px solid #fff7e6; padding: 20px; border-radius: 10px;">
+                    <h3>📰 Технически блогове</h3>
+                    <ul style="margin: 15px 0 0 20px;">
+                        <li><a href="https://openai.com/blog" target="_blank">OpenAI Blog</a></li>
+                        <li><a href="https://ai.googleblog.com" target="_blank">Google AI Blog</a></li>
+                        <li><a href="https://huggingface.co/blog" target="_blank">Hugging Face Blog</a></li>
+                        <li><a href="https://www.deepmind.com/blog" target="_blank">DeepMind Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div style="border: 2px solid #f0ffe6; padding: 20px; border-radius: 10px;">
+                    <h3>🎥 YouTube канали</h3>
+                    <ul style="margin: 15px 0 0 20px;">
+                        <li>Two Minute Papers</li>
+                        <li>Sentdex</li>
+                        <li>Andrej Karpathy</li>
+                        <li>Lex Fridman</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Секция 5: Интерактивен инструмент -->
+        <div class="section fade-in">
+            <h2>🔍 Намери подходящ ресурс</h2>
+            
+            <div style="background: #f8f9fa; padding: 25px; border-radius: 10px; margin-top: 20px;">
+                <h3>🎯 Какво търсиш?</h3>
+                
+                <div style="margin: 20px 0;">
+                    <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px;">
+                        <button class="resource-filter" data-category="courses">🎓 Курсове</button>
+                        <button class="resource-filter" data-category="tools">🛠️ Инструменти</button>
+                        <button class="resource-filter" data-category="communities">👥 Общности</button>
+                        <button class="resource-filter" data-category="books">📚 Книги</button>
+                        <button class="resource-filter" data-category="all">📊 Всичко</button>
+                    </div>
+                    
+                    <div id="filteredResources" style="min-height: 100px; padding: 20px; background: white; border-radius: 10px;">
+                        <p style="text-align: center; color: #666;">Избери категория, за да видиш препоръчани ресурси</p>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 25px; padding: 20px; background: #e7f3ff; border-radius: 10px;">
+                    <h4>💡 Съвет:</h4>
+                    <p>Започни с <strong>ChatGPT за обща употреба</strong> и <strong>DeepLearning.AI курсовете</strong> ако си начинаещ. При напреднали познания, разгледай <strong>LangChain</strong> и <strong>Hugging Face</strong>.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Секция 6: Актуализации -->
+        <div class="section warning-box">
+            <h2>⚠️ Важни бележки</h2>
+            <ul>
+                <li><strong>Ресурсите се променят бързо</strong> - AI полето се развива ежедневно</li>
+                <li><strong>Проверявай актуалността</strong> - някои инструменти може да са вече остарели</li>
+                <li><strong>Използвай официални източници</strong> за най-точна информация</li>
+                <li><strong>Бъди критичен</strong> - не всички ресурси са с еднакво качество</li>
+                <li><strong>Споделяй</strong> - ако намериш добър ресурс, сподели го с общността</li>
+            </ul>
+            
+            <div style="margin-top: 20px; padding: 15px; background: rgba(255,255,255,0.1); border-radius: 8px;">
+                <h4>🔄 Актуализации на ресурсите:</h4>
+                <p>Този списък се актуализира последно на: <strong>Март 2024</strong></p>
+                <p>Ако забележиш остарял линк или имаш предложение за нов ресурс, <a href="#" style="color: white; text-decoration: underline;">свържи се с нас</a>.</p>
+            </div>
+        </div>
+
+        <!-- Навигационни бутони -->
+        <div class="section" style="text-align: center;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+                <button class="secondary-btn" onclick="window.location.href='bg.html'">
+                    <span>📚</span>
+                    <span>Обратно към главното ръководство</span>
+                </button>
+                
+                <button class="primary-btn" onclick="window.location.href='templates.html'">
+                    <span>📋</span>
+                    <span>Виж шаблони и примери</span>
+                </button>
+                
+                <button class="secondary-btn" onclick="window.location.href='prompt-builder.html'">
+                    <span>🏗️</span>
+                    <span>Изпробвай Prompt Builder</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>📚 AI Ресурси &copy; 2024</p>
+            <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.7;">
+                Колекция от полезни инструменти и материали за AI
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Филтриране на ресурси
+        document.querySelectorAll('.resource-filter').forEach(button => {
+            button.addEventListener('click', function() {
+                const category = this.getAttribute('data-category');
+                const resultDiv = document.getElementById('filteredResources');
+                
+                // Премахване на активен клас от всички бутони
+                document.querySelectorAll('.resource-filter').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                
+                // Добавяне на активен клас на текущия бутон
+                this.classList.add('active');
+                
+                // Данни за ресурсите по категории
+                const resources = {
+                    courses: [
+                        { icon: '🎯', name: 'DeepLearning.AI', desc: 'Курсове от Andrew Ng', link: 'https://www.deeplearning.ai' },
+                        { icon: '🧠', name: 'Coursera', desc: 'Специализации по ML и AI', link: 'https://www.coursera.org' },
+                        { icon: '🚀', name: 'Fast.ai', desc: 'Практични курсове за начинаещи', link: 'https://www.fast.ai' }
+                    ],
+                    tools: [
+                        { icon: '⚡', name: 'ChatGPT', desc: 'AI асистент за обща употреба', link: 'https://chat.openai.com' },
+                        { icon: '💎', name: 'Claude', desc: 'AI с фокус върху безопасност', link: 'https://claude.ai' },
+                        { icon: '🧠', name: 'Gemini', desc: 'Google AI асистент', link: 'https://gemini.google.com' }
+                    ],
+                    communities: [
+                        { icon: '🌐', name: 'r/MachineLearning', desc: 'Reddit общност за ML', link: 'https://reddit.com/r/MachineLearning' },
+                        { icon: '🤖', name: 'r/artificial', desc: 'Общност за AI дискусии', link: 'https://reddit.com/r/artificial' },
+                        { icon: '💬', name: 'Hugging Face', desc: 'Общност за AI модели', link: 'https://huggingface.co' }
+                    ],
+                    books: [
+                        { icon: '🤖', name: 'AI Superpowers', desc: 'Кай-Фу Лий', desc2: 'AI в Китай и САЩ' },
+                        { icon: '🎯', name: 'The Age of AI', desc: 'Хенри Кисинджър', desc2: 'AI и геополитика' },
+                        { icon: '💡', name: 'Life 3.0', desc: 'Макс Тегмарк', desc2: 'AI и бъдещето' }
+                    ],
+                    all: [
+                        { icon: '⭐', name: 'Най-популярни', desc: 'Започни с тези', type: 'recommended' },
+                        { icon: '⚡', name: 'ChatGPT', desc: 'Най-използваният AI асистент', type: 'tool' },
+                        { icon: '🎯', name: 'DeepLearning.AI', desc: 'Най-добрите курсове', type: 'course' },
+                        { icon: '🌐', name: 'r/MachineLearning', desc: 'Най-активната общност', type: 'community' }
+                    ]
+                };
+                
+                // Генериране на HTML за избраната категория
+                let html = '<h4>' + this.textContent + ':</h4>';
+                html += '<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 15px;">';
+                
+                resources[category].forEach(resource => {
+                    html += '<div style="background: white; border: 1px solid #e8e8e8; padding: 20px; border-radius: 10px;">';
+                    html += '<div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">';
+                    html += '<span style="font-size: 1.5em;">' + resource.icon + '</span>';
+                    html += '<div>';
+                    html += '<strong>' + resource.name + '</strong>';
+                    html += '<p style="margin: 5px 0 0 0; color: #666; font-size: 0.9em;">' + resource.desc + '</p>';
+                    if (resource.desc2) {
+                        html += '<p style="margin: 5px 0 0 0; color: #999; font-size: 0.85em;">' + resource.desc2 + '</p>';
+                    }
+                    html += '</div>';
+                    html += '</div>';
+                    
+                    if (resource.link) {
+                        html += '<a href="' + resource.link + '" target="_blank" style="display: inline-block; background: #4a6fa5; color: white; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-size: 0.9em; margin-top: 10px;">Посети</a>';
+                    }
+                    
+                    html += '</div>';
+                });
+                
+                html += '</div>';
+                resultDiv.innerHTML = html;
+            });
+        });
+        
+        // Стилове за филтър бутони
+        const style = document.createElement('style');
+        style.textContent = `
+            .resource-filter {
+                background: white;
+                border: 2px solid #4a6fa5;
+                color: #4a6fa5;
+                padding: 10px 20px;
+                border-radius: 25px;
+                cursor: pointer;
+                font-weight: bold;
+                transition: all 0.3s;
+            }
+            
+            .resource-filter:hover {
+                background: #4a6fa5;
+                color: white;
+                transform: translateY(-2px);
+            }
+            
+            .resource-filter.active {
+                background: #4a6fa5;
+                color: white;
+            }
+            
+            .resource-link {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                padding: 15px;
+                background: #f8f9fa;
+                border-radius: 10px;
+                text-decoration: none;
+                color: inherit;
+                transition: all 0.3s;
+            }
+            
+            .resource-link:hover {
+                background: #e7f3ff;
+                transform: translateY(-3px);
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            }
+            
+            .tech-tag {
+                background: #e7f3ff;
+                color: #4a6fa5;
+                padding: 8px 16px;
+                border-radius: 20px;
+                font-size: 0.9em;
+                font-weight: 500;
+            }
+            
+            .resource-card {
+                transition: transform 0.3s;
+            }
+            
+            .resource-card:hover {
+                transform: translateY(-5px);
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Mobile menu script
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (menuToggle && navLinks) {
+                menuToggle.addEventListener('click', () => {
+                    menuToggle.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                });
+                
+                document.addEventListener('click', (e) => {
+                    if (!e.target.closest('.main-nav') && navLinks.classList.contains('active')) {
+                        menuToggle.classList.remove('active');
+                        navLinks.classList.remove('active');
+                    }
+                });
+                
+                document.querySelectorAll('.nav-dropdown .dropdown-toggle').forEach(toggle => {
+                    toggle.addEventListener('click', (e) => {
+                        if (window.innerWidth <= 768) {
+                            e.preventDefault();
+                            const dropdown = toggle.parentElement;
+                            dropdown.classList.toggle('active');
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
