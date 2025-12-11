@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Ръководство за Комуникация - Научете се да общувате с AI</title>
+    
+    <!-- Meta tags за SEO и социални мрежи -->
+    <meta name="description" content="Научете се как да комуникирате ефективно с AI асистенти като ChatGPT, Claude, Gemini. Пълно ръководство за създаване на промптове с практически примери, шаблони и инструменти.">
+    <meta name="keywords" content="AI комуникация, промпт инженеринг, ChatGPT ръководство, AI асистенти съвети, шаблони за промптове, как да говориш с AI, ефективни AI промптове, Claude, Gemini, AI уроци">
+    <meta name="author" content="AI Guide Team">
+    <meta property="og:title" content="AI Ръководство за Комуникация">
+    <meta property="og:description" content="Безплатно ръководство за ефективна комуникация с AI асистенти. Научете техники, шаблони и най-добри практики.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/667eea/ffffff?text=AI+Ръководство">
+    <meta property="og:type" content="website">
+    
+    <!-- PWA и стилове -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+    <meta name="theme-color" content="#4a6fa5">
+    
+    <!-- Допълнителни стилове само за началната страница -->
+    <style>
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
+        
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
+            text-align: center;
+            line-height: 1.6;
+        }
+        
+        .container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 40px 20px; 
+        }
+        
+        /* Хедър стилове */
+        header { 
+            padding: 80px 20px 60px; 
+            animation: fadeIn 1s ease-out;
+        }
+        
+        h1 { 
+            font-size: clamp(2.5em, 5vw, 3.8em); 
+            margin-bottom: 20px; 
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            line-height: 1.2;
+        }
+        
+        .subtitle { 
+            font-size: clamp(1.1em, 2.5vw, 1.5em); 
+            opacity: 0.9; 
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Главен бутон */
+        .main-btn { 
+            margin: 40px 0; 
+        }
+        
+        .enter-btn {
+            background: rgba(255, 255, 255, 0.95);
+            color: #667eea;
+            border: none;
+            padding: 22px 45px;
+            border-radius: 50px;
+            font-size: 1.3em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            min-width: 280px;
+            justify-content: center;
+            text-decoration: none;
+        }
+        
+        .enter-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+            background: white;
+        }
+        
+        .enter-btn:active {
+            transform: translateY(-2px);
+        }
+        
+        /* Бързи линкове секция */
+        .quick-links {
+            margin: 50px 0 40px;
+            animation: fadeIn 1.2s ease-out;
+        }
+        
+        .quick-links h3 {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+        
+        .quick-link-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .quick-link {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 14px 28px;
+            border-radius: 25px;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            font-weight: 500;
+            flex: 1;
+            min-width: 180px;
+            max-width: 250px;
+        }
+        
+        .quick-link:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Предимства секция */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 70px 0 50px;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 35px 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s;
+            text-align: left;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-8px);
+        }
+        
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .feature-card p {
+            opacity: 0.9;
+            font-size: 1.05em;
+        }
+        
+        /* Футър */
+        footer {
+            margin-top: 80px;
+            padding: 40px 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            animation: fadeIn 1.5s ease-out;
+        }
+        
+        .footer-features {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+        
+        /* Пропусни въведение бутон */
+        .skip-intro {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: all 0.3s;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+        
+        .skip-intro:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        /* Зареждащ индикатор */
+        .loading-indicator {
+            display: none;
+            margin-top: 20px;
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+        
+        .loading-indicator.active {
+            display: block;
+        }
+        
+        /* Анимации */
+        @keyframes fadeIn {
+            from { 
+                opacity: 0; 
+                transform: translateY(20px); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0); 
+            }
+        }
+        
+        /* Responsive дизайн */
+        @media (max-width: 768px) {
+            header { 
+                padding: 60px 20px 40px; 
+            }
+            
+            .enter-btn {
+                padding: 18px 35px;
+                min-width: 250px;
+                font-size: 1.1em;
+            }
+            
+            .main-btn {
+                margin: 30px 0;
+            }
+            
+            .quick-link {
+                min-width: 150px;
+                padding: 12px 20px;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                margin: 50px 0;
+            }
+            
+            .feature-card {
+                padding: 25px;
+            }
+            
+            .skip-intro {
+                top: 10px;
+                right: 10px;
+                font-size: 0.8em;
+                padding: 8px 16px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .enter-btn {
+                min-width: 100%;
+                max-width: 300px;
+            }
+            
+            .quick-link-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .quick-link {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Пропусни въведение бутон -->
+    <button class="skip-intro" id="skipIntro">Прескочи към сайта</button>
+    
+    <!-- Навигационно меню (както на другите страници) -->
+    <nav class="main-nav" aria-label="Основна навигация">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html" class="logo">🤖 AI Guide</a>
+            </div>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="Отвори/Затвори меню" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link active" aria-current="page">🏠 Начало</a>
+                
+                <!-- Основно ръководство -->
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        📚 Ръководство
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="bg.html#basics" class="dropdown-item">🎯 Основи на комуникацията</a>
+                        <a href="templates.html" class="dropdown-item">📋 Шаблони и примери</a>
+                        <a href="bg.html#advanced" class="dropdown-item">🚀 Разширени техники</a>
+                    </div>
+                </div>
+                
+                <!-- За специфични групи -->
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        👥 За вас
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="programmers.html" class="dropdown-item">💻 За програмисти</a>
+                        <a href="writers.html" class="dropdown-item">✍️ За писатели</a>
+                        <a href="students.html" class="dropdown-item">🎓 За студенти</a>
+                        <a href="business.html" class="dropdown-item">💼 За бизнес</a>
+                    </div>
+                </div>
+                
+                <!-- Инструменти -->
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        🛠️ Инструменти
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="prompt-analyzer.html" class="dropdown-item">🔍 Анализатор на промптове</a>
+                        <a href="prompt-builder.html" class="dropdown-item">🏗️ Създател на промптове</a>
+                        <a href="practice.html" class="dropdown-item">🧪 Упражнения</a>
+                    </div>
+                </div>
+                
+                <!-- Ресурси -->
+                <a href="resources.html" class="nav-link">📚 Ресурси</a>
+                
+                <!-- Езиков превключател - САМО БЪЛГАРСКИ -->
+                <div class="language-switcher-nav">
+                    <a href="bg.html" class="lang-link active" aria-label="Българска версия">🇧🇬</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Основно съдържание -->
+    <main id="main-content" class="container">
+        <header>
+            <h1>🤖 AI Ръководство за Комуникация</h1>
+            <p class="subtitle">
+                Научете изкуството на общуването с AI асистенти. Научете техники за създаване на промптове, 
+                най-добри практики и практически стратегии за по-добри резултати от ChatGPT, Claude, Gemini и други AI инструменти.
+            </p>
+            
+            <!-- Главен бутон -->
+            <div class="main-btn">
+                <a href="bg.html" class="enter-btn" id="enterBtn" aria-label="Влез в българския сайт">
+                    <span role="img" aria-label="Bulgarian flag">🇧🇬</span>
+                    <span>Влез в българския сайт</span>
+                </a>
+            </div>
+            
+            <!-- Зареждащ индикатор -->
+            <div class="loading-indicator" id="loadingIndicator">
+                <p>Преминаване към сайта... <span class="loader"></span></p>
+            </div>
+            
+            <p style="opacity: 0.8; font-size: 1.1em; margin-top: 20px;">
+                Натиснете бутона по-горе, за да влезете в пълната българска версия на сайта.
+            </p>
+        </header>
+        
+        <!-- Бързи линкове секция -->
+        <div class="quick-links">
+            <h3>⏩ Прескочете до популярни раздели:</h3>
+            <div class="quick-link-grid">
+                <a href="bg.html#basics" class="quick-link">📖 Основи на комуникацията</a>
+                <a href="templates.html" class="quick-link">📋 Шаблони за промптове</a>
+                <a href="prompt-builder.html" class="quick-link">🏗️ Инструмент за създаване</a>
+                <a href="bg.html#mistakes" class="quick-link">⚠️ Често срещани грешки</a>
+            </div>
+        </div>
+        
+        <!-- Предимства секция -->
+        <div class="features">
+            <div class="feature-card">
+                <h3><span role="img" aria-label="Target">🎯</span> Ефективна комуникация</h3>
+                <p>Научете основните принципи на ясната и ефективна комуникация с AI асистенти. Разберете как да структурирате заявките си за оптимални резултати.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3><span role="img" aria-label="Rocket">🚀</span> Разширени техники</h3>
+                <p>Научете напреднали техники за създаване на промптове, role-playing, chain-of-thought и други техники, използвани от AI професионалисти.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3><span role="img" aria-label="Light bulb">💡</span> Практически примери</h3>
+                <p>Достъпете готови за употреба шаблони и реални примери, които можете да копирате, адаптирате и прилагате веднага към вашите проекти и задачи.</p>
+            </div>
+        </div>
+        
+        <!-- Допълнителна информация -->
+        <div style="max-width: 800px; margin: 0 auto 40px; padding: 30px; background: rgba(255,255,255,0.05); border-radius: 15px;">
+            <h3 style="margin-bottom: 15px; font-size: 1.3em;">✨ Какво ще научите:</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; text-align: left;">
+                <div style="display: flex; align-items: flex-start; gap: 10px;">
+                    <span style="opacity: 0.8;">✓</span>
+                    <span>Как да пишете ясни, специфични промптове</span>
+                </div>
+                <div style="display: flex; align-items: flex-start; gap: 10px;">
+                    <span style="opacity: 0.8;">✓</span>
+                    <span>Техники за решаване на сложни проблеми</span>
+                </div>
+                <div style="display: flex; align-items: flex-start; gap: 10px;">
+                    <span style="opacity: 0.8;">✓</span>
+                    <span>Разбиране на ограниченията и възможностите на AI</span>
+                </div>
+                <div style="display: flex; align-items: flex-start; gap: 10px;">
+                    <span style="opacity: 0.8;">✓</span>
+                    <span>Инструменти за анализ и подобряване на вашите промптове</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Футър -->
+        <footer>
+            <p style="font-size: 1.1em; margin-bottom: 15px;">
+                Това изчерпателно ръководство ви помага да отключите пълния потенциал на AI асистентите чрез по-добра комуникация.
+            </p>
+            <div class="footer-features">
+                <span>🌐 Работи офлайн</span>
+                <span>📱 Инсталира се като ап</span>
+                <span>🆓 Безплатно завинаги</span>
+                <span>🔒 Без проследяване</span>
+            </div>
+            <p style="margin-top: 25px; font-size: 0.9em; opacity: 0.7;">
+                Направено с ❤️ за AI общността | Последна актуализация: 2024
+            </p>
+        </footer>
+    </main>
+
+    <!-- JavaScript -->
+    <script>
+        // Навигационно меню
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (menuToggle && navLinks) {
+                menuToggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    navLinks.classList.toggle('active');
+                    menuToggle.classList.toggle('active');
+                    menuToggle.setAttribute('aria-expanded', 
+                        navLinks.classList.contains('active') ? 'true' : 'false'
+                    );
+                });
+            }
+            
+            // Променена логика за dropdown връзки в мобилен режим
+            const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+            
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', function(e) {
+                    // Само за мобилни устройства
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        
+                        const dropdown = this.closest('.nav-dropdown');
+                        
+                        // Затваряне на всички други dropdowns
+                        document.querySelectorAll('.nav-dropdown.active').forEach(item => {
+                            if (item !== dropdown) {
+                                item.classList.remove('active');
+                            }
+                        });
+                        
+                        // Превключване на текущия dropdown
+                        dropdown.classList.toggle('active');
+                        return false;
+                    }
+                });
+            });
+            
+            // Затваряне на менюто при клик на редовен линк
+            const regularLinks = document.querySelectorAll('.nav-link:not(.dropdown-toggle), .dropdown-item');
+            regularLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    if (window.innerWidth <= 768 && navLinks) {
+                        navLinks.classList.remove('active');
+                        if (menuToggle) {
+                            menuToggle.classList.remove('active');
+                            menuToggle.setAttribute('aria-expanded', 'false');
+                        }
+                        document.querySelectorAll('.nav-dropdown.active').forEach(dropdown => {
+                            dropdown.classList.remove('active');
+                        });
+                    }
+                });
+            });
+            
+            // Затваряне на менюто при клик извън него
+            document.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    if (!e.target.closest('.main-nav') && navLinks && navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        if (menuToggle) {
+                            menuToggle.classList.remove('active');
+                            menuToggle.setAttribute('aria-expanded', 'false');
+                        }
+                        document.querySelectorAll('.nav-dropdown.active').forEach(dropdown => {
+                            dropdown.classList.remove('active');
+                        });
+                    }
+                }
+            });
+            
+            // Автоматично преминаване след 8 секунди
+            const enterBtn = document.getElementById('enterBtn');
+            const loadingIndicator = document.getElementById('loadingIndicator');
+            const skipIntro = document.getElementById('skipIntro');
+            
+            // Функция за преминаване към сайта
+            function goToSite() {
+                if (loadingIndicator) {
+                    loadingIndicator.classList.add('active');
+                    loadingIndicator.innerHTML = '<p>Преминаване към сайта... <span style="display:inline-block; animation: spin 1s linear infinite;">⏳</span></p>';
+                }
+                
+                setTimeout(() => {
+                    window.location.href = 'bg.html';
+                }, 800);
+            }
+            
+            // Клик върху главния бутон
+            if (enterBtn) {
+                enterBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    goToSite();
+                });
+            }
+            
+            // Пропусни бутон
+            if (skipIntro) {
+                skipIntro.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    goToSite();
+                });
+            }
+            
+            // Автоматично преминаване след 8 секунди
+            const autoRedirectTimer = setTimeout(() => {
+                goToSite();
+            }, 8000);
+            
+            // Спиране на таймера при взаимодействие
+            document.addEventListener('click', () => clearTimeout(autoRedirectTimer));
+            document.addEventListener('keydown', () => clearTimeout(autoRedirectTimer));
+            
+            // Добавяне на CSS за spinner
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes spin {
+                    0% { transform: rotate(0deg); }
+                    100% { transform: rotate(360deg); }
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+</body>
+</html>
