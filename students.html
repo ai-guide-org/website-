@@ -459,5 +459,43 @@
             }
         });
     </script>
+<!-- Брояч за посещения - добави във футъра -->
+<script>
+// Брояч за посещения на страница
+(function() {
+    // Име на текущата страница
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    
+    // Взимане на текущите посещения от localStorage
+    let pageVisits = JSON.parse(localStorage.getItem('aiGuidePageVisits') || '{}');
+    
+    // Инициализиране, ако страницата не съществува
+    if (!pageVisits[currentPage]) {
+        pageVisits[currentPage] = 0;
+    }
+    
+    // Увеличаване на брояча
+    pageVisits[currentPage]++;
+    
+    // Запазване обратно в localStorage
+    localStorage.setItem('aiGuidePageVisits', JSON.stringify(pageVisits));
+    
+    // Показване на брояча (ако има елемент с id "visitCount")
+    const visitElement = document.getElementById('visitCount');
+    if (visitElement) {
+        visitElement.textContent = pageVisits[currentPage];
+    }
+    
+    // Също може да покаже общ брой посещения за целия сайт
+    const totalVisits = Object.values(pageVisits).reduce((a, b) => a + b, 0);
+    const totalElement = document.getElementById('totalVisits');
+    if (totalElement) {
+        totalElement.textContent = totalVisits;
+    }
+    
+    console.log(`Тази страница е посетена ${pageVisits[currentPage]} пъти`);
+    console.log(`Общо посещения на сайта: ${totalVisits}`);
+})();
+</script>
 </body>
 </html>
