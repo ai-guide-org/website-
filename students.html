@@ -284,14 +284,36 @@
         </div>
     </div>
 
-    <footer>
-        <div class="container">
-            <p>🎓 AI Ръководство за Студенти &copy; 2024</p>
-            <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.7;">
-                Умни инструменти за умни студенти
+<!-- ТОВА Е ЦЯЛОСТНИЯТ FOOTER БЛОК - заменете го във всеки файл -->
+<footer>
+    <div class="container">
+        <p>AI Комуникационен Гид &copy; 2024</p>
+        <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.7;">
+            Работи офлайн • Може да се инсталира като приложение • Безплатно завинаги
+        </p>
+        
+        <!-- GitHub и sitemap линкове (ако ги имаш) -->
+        <p style="margin-top: 15px; font-size: 0.8em; opacity: 0.6;">
+            <a href="https://github.com/ai-guide-org/website-" style="color: var(--primary-color);">GitHub Repository</a> | 
+            <a href="sitemap.xml" style="color: var(--primary-color);">Карта на сайта</a>
+        </p>
+        
+        <!-- НОВИЯТ БЛОК ЗА ПОСЕЩЕНИЯ (добави го) -->
+        <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.1);">
+            <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; font-size: 0.85em; opacity: 0.8;">
+                <div>
+                    👁️ Тази страница: <span id="visitCount" style="font-weight: bold;">0</span> посещения
+                </div>
+                <div>
+                    🌐 Целият сайт: <span id="totalVisits" style="font-weight: bold;">0</span> посещения
+                </div>
+            </div>
+            <p style="margin-top: 10px; font-size: 0.8em; opacity: 0.6;">
+                Статистиката се запазва локално във вашия браузър
             </p>
         </div>
-    </footer>
+    </div>
+</footer>
 
     <script>
         // Функция за копиране на шаблон
