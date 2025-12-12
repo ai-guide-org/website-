@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Комуникация - Български</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4a6fa5">
+<!-- SEO Meta Tags -->
+<meta name="description" content="Learn how to communicate effectively with AI assistants. Complete guide with examples, techniques, and interactive tools.">
+<meta name="keywords" content="AI, ChatGPT, prompt engineering, artificial intelligence, communication, guide, tutorial">
+<meta name="author" content="AI Guide Team">
+
+<!-- Open Graph / Social Media -->
+<meta property="og:title" content="AI Communication Guide">
+<meta property="og:description" content="Complete guide for effective communication with AI assistants">
+<meta property="og:image" content="https://belene888.github.io/ai-guide/og-image.png">
+<meta property="og:url" content="https://belene888.github.io/ai-guide/">
+<meta property="og:type" content="website">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Communication Guide">
+<meta name="twitter:description" content="Learn to communicate effectively with AI">
+<meta name="twitter:image" content="https://belene888.github.io/ai-guide/twitter-image.png">
+</head>
+<body>
+<!-- НАВИГАЦИОННО МЕНЮ -->
+<nav class="main-nav">
+    <div class="container">
+        <div class="nav-brand">
+            <a href="index.html" class="logo">🤖 AI Guide</a>
+        </div>
+        
+        <button class="menu-toggle" id="menuToggle" aria-label="Отвори/затвори меню">
+            <span class="hamburger"></span>
+        </button>
+        
+        <div class="nav-links" id="navLinks">
+            <a href="index.html" class="nav-link">🏠 Начало</a>
+            
+            <!-- Основно ръководство -->
+            <div class="nav-dropdown">
+                <a href="#" class="nav-link dropdown-toggle">
+                    📚 Ръководство
+                </a>
+                <div class="dropdown-menu">
+                    <a href="bg.html" class="dropdown-item">🎯 Основи на комуникацията</a>
+                    <a href="templates.html" class="dropdown-item">📋 Шаблони и примери</a>
+                    <a href="techniques.html" class="dropdown-item">🚀 Напреднали техники</a>
+                </div>
+            </div>
+            
+            <!-- За специфични групи -->
+            <div class="nav-dropdown">
+                <a href="#" class="nav-link dropdown-toggle">
+                    👥 За теб
+                </a>
+                <div class="dropdown-menu">
+                    <a href="programmers.html" class="dropdown-item">💻 За програмисти</a>
+                    <a href="writers.html" class="dropdown-item">✍️ За писатели</a>
+                    <a href="students.html" class="dropdown-item">🎓 За студенти</a>
+                    <a href="business.html" class="dropdown-item">💼 За бизнес</a>
+                </div>
+            </div>
+            
+            <!-- Инструменти -->
+            <div class="nav-dropdown">
+                <a href="#" class="nav-link dropdown-toggle">
+                    🛠️ Инструменти
+                </a>
+                <div class="dropdown-menu">
+                    <a href="prompt-analyzer.html" class="dropdown-item">🔍 Анализатор на промпт</a>
+                    <a href="prompt-builder.html" class="dropdown-item">🏗️ Създател на промпт</a>
+                    <a href="practice.html" class="dropdown-item">🧪 Практикувай</a>
+                </div>
+            </div>
+            
+            <!-- Ресурси -->
+            <a href="resources.html" class="nav-link">📚 Ресурси</a>
+            
+            <!-- Език -->
+            <div class="language-switcher-nav">
+                <a href="bg.html" class="lang-link active">🇧🇬</a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    <header class="main-header">
+        <div class="container">
+            <div class="language-switcher">
+                
+                
+                
+        
+            </div>
+            <h1>🤖 Ръководство за комуникация с AI</h1>
+            <p class="subtitle">Научи се да говориш ефективно с AI асистенти</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="section fade-in">
+          
+            <div class="tip bad-example">
+                <h3>❌ Лош пример:</h3>
+                <p>"Помогни ми с уебсайт"</p>
+                <p><em>Проблем:</em> Твърде общо. Какъв сайт? За какво? Какъв стил?</p>
+            </div>
+            <div class="tip good-example">
+                <h3>✅ Добър пример:</h3>
+                <p>"Създай HTML шаблон за сайт на ресторант. Включи: навигация с 5 страници, меню секция с 10 ястия, контактна форма с карта, и футър с социални мрежи."</p>
+                <p><em>Защо е добре:</em> Конкретно, детайлно, ясни изисквания.</p>
+            </div>
+        </div>
+
+        <div class="section fade-in">
+            <h2>🧪 Практикувай тук:</h2>
+            <p>Напиши промпт към AI и ще го анализирам:</p>
+            <textarea id="promptInput" placeholder="Напиши своя промпт тук...">Помогни ми да създам приложение</textarea>
+            <button class="primary-btn" onclick="analyzePrompt()">
+                <span>📊</span>
+                <span>Анализирай моя промпт</span>
+            </button>
+            <div id="result" class="result-box"></div>
+        </div>
+
+        <div class="section fade-in">
+            <h2>🚀 Напреднали техники:</h2>
+            <div class="tip">
+                <h3>1. Ролево задаване</h3>
+                <p>"Представи си, че си [роля]. Например: 'опитен програмист с 10 години опит', 'учител по математика', 'бизнес консултант'."</p>
+            </div>
+            <div class="tip">
+                <h3>2. Стъпково мислене</h3>
+                <p>"Обясни ми стъпка по стъпка как да..."</p>
+            </div>
+            <div class="tip">
+                <h3>3. Даване на примери</h3>
+                <p>"Ето пример как искам да отговориш: [пример]. Сега отговори на: [въпрос]"</p>
+            </div>
+        </div>
+
+        <div class="section warning-box fade-in">
+            <h2>⚠️ Важни ограничения:</h2>
+            <ul>
+                <li>AI <strong>не може</strong> да извършва физически действия</li>
+                <li>AI <strong>не има</strong> достъп до лични ти файлове</li>
+                <li>AI <strong>не е</strong> лекар - не взимай медицински съвети</li>
+                <li>AI <strong>може да греши</strong> - винаги проверявай важна информация</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <button class="secondary-btn" onclick="window.location.href='index.html'">
+                <span>🏠</span>
+                <span>Обратно към началната страница</span>
+            </button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>AI Комуникационен Гид &copy; 2024</p>
+            <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.7;">
+                Работи офлайн • Може да се инсталира като приложение • Безплатно завинаги
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function analyzePrompt() {
+            const prompt = document.getElementById('promptInput').value;
+            const resultDiv = document.getElementById('result');
+            
+            let score = 0;
+            let feedback = '<h3>📊 Резултати от анализа:</h3>';
+            
+            if (prompt.length > 30) {
+                score++;
+                feedback += '<p>✅ <strong>Дължина:</strong> Достатъчно дълъг промпт</p>';
+            } else {
+                feedback += '<p>⚠️ <strong>Дължина:</strong> Твърде кратко. Добави повече детайли.</p>';
+            }
+            
+            const keywords = ['как', 'пример', 'стъпка', 'създай', 'направи', 'дизайн', 'код'];
+            const hasKeywords = keywords.some(word => prompt.toLowerCase().includes(word));
+            
+            if (hasKeywords) {
+                score++;
+                feedback += '<p>✅ <strong>Конкретност:</strong> Използваш конкретни термини</p>';
+            } else {
+                feedback += '<p>💡 <strong>Конкретност:</strong> Добави думи като "как", "пример", "създай"</p>';
+            }
+            
+            if (prompt.includes('?')) {
+                score++;
+                feedback += '<p>✅ <strong>Въпрос:</strong> Имаш конкретен въпрос</p>';
+            }
+            
+            feedback += '<hr style="margin: 15px 0;">';
+            feedback += '<h4>Обща оценка: <span class="score-display">' + score + '/3</span></h4>';
+            
+            if (score === 3) {
+                feedback += '<div style="background:#d9f7be; padding:15px; border-radius:8px; margin:15px 0;">';
+                feedback += '<p style="color:#52c41a; font-weight:bold;">🎉 Отлично! AI ще ти отговори перфектно!</p>';
+                feedback += '</div>';
+            } else if (score >= 2) {
+                feedback += '<p>👍 <strong>Добре!</strong> Малки подобрения ще помогнат.</p>';
+            } else {
+                feedback += '<p>🤔 <strong>Може по-добре.</strong> Виж съветите по-горе.</p>';
+            }
+            
+            if (score < 3) {
+                feedback += '<div style="background:#fff7e6; padding:15px; margin-top:15px; border-radius:8px;">';
+                feedback += '<p><strong>💡 Съвет за подобрение:</strong></p>';
+                feedback += '<p>Опитай: "' + prompt + '. Можеш ли да дадеш конкретни стъпки и примери?"</p>';
+                feedback += '</div>';
+            }
+            
+            resultDiv.innerHTML = feedback;
+        }
+        
+        // Запазване на избора на език
+        localStorage.setItem('preferred-language', 'bg');
+        
+        // Анимации при зареждане
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                document.body.classList.add('loaded');
+            }, 100);
+        });
+    </script>
+<script>
+// Регистрация на Service Worker за PWA
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/ai-guide/service-worker.js')
+      .then(registration => {
+        console.log('ServiceWorker registered: ', registration.scope);
+      })
+      .catch(error => {
+        console.log('ServiceWorker registration failed: ', error);
+      });
+  });
+}
+
+// Показване на инсталационна подкана
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  
+  // Показване на бутон за инсталиране
+  const installButton = document.createElement('button');
+  installButton.className = 'primary-btn';
+  installButton.innerHTML = '📱 Инсталирай като приложение';
+  installButton.style.margin = '20px auto';
+  installButton.style.display = 'block';
+  installButton.onclick = () => {
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('User accepted install');
+      }
+      deferredPrompt = null;
+    });
+  };
+  
+  // Добавяне на бутона в края на страницата
+  document.querySelector('footer').appendChild(installButton);
+});
+</script>
+<script>
+// Регистрация на Service Worker за PWA
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/ai-guide/service-worker.js')
+      .then(registration => {
+        console.log('ServiceWorker регистриран успешно: ', registration.scope);
+      })
+      .catch(error => {
+        console.log('ServiceWorker регистрация неуспешна: ', error);
+      });
+  });
+}
+
+// Показване на инсталационна подкана за приложение
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  
+  // Създаване на бутон за инсталиране (само ако не съществува)
+  if (!document.getElementById('installButton')) {
+    const installButton = document.createElement('button');
+    installButton.id = 'installButton';
+    installButton.className = 'primary-btn';
+    installButton.innerHTML = '📱 Инсталирай като приложение';
+    installButton.style.margin = '20px auto';
+    installButton.style.display = 'block';
+    installButton.style.maxWidth = '300px';
+    installButton.onclick = () => {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            console.log('Потребителят прие инсталацията');
+            installButton.style.display = 'none';
+          }
+          deferredPrompt = null;
+        });
+      }
+    };
+    
+    // Добавяне на бутона преди футъра
+    const footer = document.querySelector('footer');
+    footer.parentNode.insertBefore(installButton, footer);
+    
+    // Автоматично скриване след 10 секунди
+    setTimeout(() => {
+      installButton.style.opacity = '0';
+      setTimeout(() => {
+        installButton.style.display = 'none';
+      }, 500);
+    }, 10000);
+  }
+});
+
+// Проверка дали приложението вече е инсталирано
+window.addEventListener('appinstalled', (evt) => {
+  console.log('AI Guide е инсталиран успешно');
+});
+</script>
+<script>
+// ===== ТЪМЕН РЕЖИМ ФУНКЦИИ =====
+(function() {
+    // Създаване на бутон за тъмен режим
+    const themeToggle = document.createElement('div');
+    themeToggle.className = 'theme-toggle';
+    themeToggle.innerHTML = `
+        <button class="toggle-btn" id="themeToggle" title="Превключи тъмен/светъл режим">
+            🌓
+        </button>
+    `;
+    
+    document.body.appendChild(themeToggle);
+    
+    const toggleButton = document.getElementById('themeToggle');
+    
+    // Проверка за запазени настройки
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        document.body.classList.add('dark-mode');
+        toggleButton.textContent = '🌞';
+        toggleButton.title = 'Превключи в светъл режим';
+    } else if (savedTheme === 'light') {
+        document.body.classList.add('light-mode');
+        toggleButton.textContent = '🌙';
+        toggleButton.title = 'Превключи в тъмен режим';
+    }
+    
+    // Функция за превключване
+    toggleButton.addEventListener('click', () => {
+        const isDark = document.body.classList.contains('dark-mode');
+        const isLight = document.body.classList.contains('light-mode');
+        
+        // Анимация
+        toggleButton.classList.add('rotating');
+        setTimeout(() => toggleButton.classList.remove('rotating'), 500);
+        
+        if (isDark) {
+            // От тъмен към светъл
+            document.body.classList.remove('dark-mode');
+            document.body.classList.add('light-mode');
+            toggleButton.textContent = '🌙';
+            toggleButton.title = 'Превключи в тъмен режим';
+            localStorage.setItem('theme', 'light');
+        } else if (isLight) {
+            // От светъл към автоматичен
+            document.body.classList.remove('light-mode');
+            toggleButton.textContent = '🌓';
+            toggleButton.title = 'Превключи тъмен/светъл режим';
+            localStorage.setItem('theme', 'auto');
+        } else {
+            // От автоматичен към тъмен
+            document.body.classList.add('dark-mode');
+            toggleButton.textContent = '🌞';
+            toggleButton.title = 'Превключи в светъл режим';
+            localStorage.setItem('theme', 'dark');
+        }
+    });
+    
+    // Слушане за промени в системните настройки
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (localStorage.getItem('theme') === 'auto') {
+            if (e.matches) {
+                document.body.classList.add('dark-mode');
+                document.body.classList.remove('light-mode');
+                toggleButton.textContent = '🌞';
+            } else {
+                document.body.classList.remove('dark-mode');
+                document.body.classList.add('light-mode');
+                toggleButton.textContent = '🌙';
+            }
+        }
+    });
+})();
+</script>
+<script>
+    // Мобилно меню toggle
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+
+if (menuToggle) {
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+}
+
+// Затваряне на менюто при клик извън него
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('.main-nav') && navLinks.classList.contains('active')) {
+        menuToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+    }
+});
+
+// Dropdown мобилна функционалност
+document.querySelectorAll('.nav-dropdown .dropdown-toggle').forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+            const dropdown = toggle.parentElement;
+            dropdown.classList.toggle('active');
+            
+            // Затваряне на други dropdowns
+            document.querySelectorAll('.nav-dropdown').forEach(other => {
+                if (other !== dropdown) {
+                    other.classList.remove('active');
+                }
+            });
+        }
+    });
+});
+
+// Затваряне на менюто при клик на линк (на мобилни)
+document.querySelectorAll('.nav-link, .dropdown-item').forEach(link => {
+    link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+            menuToggle.classList.remove('active');
+            navLinks.classList.remove('active');
+        }
+    });
+});
+</script>
+</body>
+</html>
