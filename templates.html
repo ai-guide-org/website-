@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шаблони за AI промптове - AI Guide</title>
+    
+    <!-- Meta tags -->
+    <meta name="description" content="Готови шаблони за AI промптове за различни ситуации. Копирай, промени и използвай!">
+    <meta name="keywords" content="AI шаблони, готови промптове, ChatGPT шаблони, примерни заявки, AI шаблони">
+    
+    <!-- Стилове -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+    
+    <!-- PWA -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body>
+    <!-- Навигация (копирай от index.html) -->
+    <nav class="main-nav" aria-label="Основна навигация">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html" class="logo">🤖 AI Guide</a>
+            </div>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="Отвори/Затвори меню" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">🏠 Начало</a>
+                
+                <!-- Основно ръководство -->
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        📚 Ръководство
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="basics.html" class="dropdown-item">🎯 Основи на комуникацията</a>
+                        <a href="templates.html" class="dropdown-item active">📋 Шаблони и примери</a>
+                        <a href="advanced.html" class="dropdown-item">🚀 Разширени техники</a>
+                    </div>
+                </div>
+                
+                <!-- За специфични групи -->
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        👥 За вас
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="programmers.html" class="dropdown-item">💻 За програмисти</a>
+                        <a href="writers.html" class="dropdown-item">✍️ За писатели</a>
+                        <a href="students.html" class="dropdown-item">🎓 За студенти</a>
+                        <a href="business.html" class="dropdown-item">💼 За бизнес</a>
+                    </div>
+                </div>
+                
+                <!-- Инструменти -->
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        🛠️ Инструменти
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="prompt-analyzer.html" class="dropdown-item">🔍 Анализатор на промптове</a>
+                        <a href="prompt-builder.html" class="dropdown-item">🏗️ Създател на промптове</a>
+                        <a href="practice.html" class="dropdown-item">🧪 Упражнения</a>
+                    </div>
+                </div>
+                
+                <!-- Ресурси -->
+                <a href="resources.html" class="nav-link">📚 Ресурси</a>
+                
+                <!-- Езиков превключател -->
+                <div class="language-switcher-nav">
+                    <a href="index.html" class="lang-link active">🇧🇬</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Хедър -->
+    <header class="main-header">
+        <div class="container">
+            <h1>📋 Шаблони за AI промптове</h1>
+            <p class="subtitle">
+                Готови шаблони за всяка ситуация. Копирай, персонализирай и използвай!
+            </p>
+        </div>
+    </header>
+
+    <!-- Основно съдържание -->
+    <main class="container">
+        <!-- Интро -->
+        <section class="section fade-in">
+            <h2>🎯 Как да използвате шаблоните:</h2>
+            <div class="tip">
+                <ol>
+                    <li><strong>Изберете шаблон</strong>, който отговаря на вашите нужди</li>
+                    <li><strong>Копирайте</strong> текста с бутона 📋</li>
+                    <li><strong>Персонализирайте</strong> - заменете текста в [скоби] с вашата информация</li>
+                    <li><strong>Използвайте</strong> в ChatGPT, Claude, Gemini или друг AI инструмент</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Категория 1: Общи шаблони -->
+        <section class="section fade-in" id="general">
+            <h2>🌐 Общи шаблони</h2>
+            <p>Универсални шаблони за различни ситуации.</p>
+            
+            <div class="templates-grid">
+                <!-- Шаблон 1 -->
+                <div class="template-card">
+                    <h4>📝 Общо обяснение</h4>
+                    <div class="template-content">
+                        <p><strong>За:</strong> Обяснение на сложни концепции</p>
+                        <pre class="template-code">Обясни [концепция] на [ниво на аудиторията]. 
+Използвай [брой] прости аналогии и дай [брой] практически примера. 
+Ако е възможно, включи сравнение с нещо познато от ежедневието.</pre>
+                        <button class="copy-btn" data-template="general1">📋 Копирай</button>
+                    </div>
+                </div>
+                
+                <!-- Шаблон 2 -->
+                <div class="template-card">
+                    <h4>📊 Сравнителен анализ</h4>
+                    <div class="template-content">
+                        <p><strong>За:</strong> Сравнение на два или повече варианта</p>
+                        <pre class="template-code">Сравни [опция А] и [опция Б] по следните критерии:
+1. [критерий 1]
+2. [критерий 2] 
+3. [критерий 3]
+Предостави информация в табличен формат и дай препоръка за [цел/ситуация].</pre>
+                        <button class="copy-btn" data-template="general2">📋 Копирай</button>
+                    </div>
+                </div>
+                
+                <!-- Шаблон 3 -->
+                <div class="template-card">
+                    <h4>🎯 Решаване на проблем</h4>
+                    <div class="template-content">
+                        <p><strong>За:</strong> Анализ и решение на проблеми</p>
+                        <pre class="template-code">Помогни ми да реша следния проблем: [описание на проблема]
+Моля, предостави:
+1. Анализ на причините
+2. Възможни решения (минимум 3)
+3. Препоръка за най-доброто решение с обосновка
+4. Стъпки за изпълнение</pre>
+                        <button class="copy-btn" data-template="general3">📋 Копирай</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Категория 2: Образователни шаблони -->
+        <section class="section fade-in" id="education">
+            <h2>🎓 Образователни шаблони</h2>
+            <p>За ученици, студенти и самообучение.</p>
+            
+            <div class="templates-grid">
+                <!-- Шаблон 4 -->
+                <div class="template-card">
+                    <h4>📚 Конспект на тема</h4>
+                    <div class="template-content">
+                        <p><strong>За:</strong> Създаване на конспекти и резюмета</p>
+                        <pre class="template-code">Направи конспект на тема "[тема]" за ученици в [клас/ниво].
+Включи:
+- Ключови понятия и дефиниции
+- Основни принципи
+- Важни дати/факти (ако са приложими)
+- Практически примери
+- Контролни въпроси за самопроверка</pre>
+                        <button class="copy-btn" data-template="edu1">📋 Копирай</button>
+                    </div>
+                </div>
+                
+                <!-- Шаблон 5 -->
+                <div class="template-card">
+                    <h4>🧪 Научен експеримент</h4>
+                    <div class="template-content">
+                        <p><strong>За:</strong> Планиране на експерименти и проекти</p>
+                        <pre class="template-code">Планирай научен експеримент на тема "[тема]".
+Планът трябва да включва:
+1. Хипотеза
+2. Необходими материали
+3. Стъпки на експеримента
+4. Как ще се събират данни
+5. Как ще се анализират резултатите
+6. Възможни изводи</pre>
+                        <button class="copy-btn" data-template="edu2">📋 Копирай</button>
+                    </div>
+                </div>
+                
+                <!-- Шаблон 6 -->
+                <div class="template-card">
+                    <h4>✍️ Есе/реферат</h4>
+                    <div class="template-content">
+                        <p><strong>За:</strong> Структуриране на писане</p>
+                        <pre class="template-code">Създай структура за есе на тема "[тема]".
+Структурата трябва да включва:
+I. Въведение (теза)
+II. Основна част:
+   A. Аргумент 1 + доказателства
+   B. Аргумент 2 + доказателства
+   C. Аргумент 3 + доказателства
+III. Заключение
+IV. Източници (минимум 3)</pre>
+                        <button class="copy-btn" data-template="edu3">📋 Копирай</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Категория 3: Бизнес шаблони -->
+        <section class="section fade-in" id="business">
+            <h2>💼 Бизнес шаблони</h2>
+            <p>За предприемачи, маркетинг и управление.</p>
+            
+            <div class="templates-grid">
+                <!-- Шаблон 7 -->
+                <div class="template-card">
+                    <h4>📈 Бизнес план</h4>
+                    <div class="template-content">
+                        <p><strong>За:</strong> Създаване на бизнес планове</p>
+                        <pre class="template-code">Създай бизнес план за "[идея за бизнес]".
+Планът трябва да включва:
+1. Резюме на бизнеса
+2. Анализ на пазара и конкуренцията
+3. Маркетинг стратегия
+4. Операционен план
+5. Финансови прогнози за първите 12 месеца
+6. Анализ на рисковете</pre>
+                        <button class="copy-btn" data-template="business1">📋 Копирай</button>
+                    </div>
+                </div>
+                
+                <!-- Шаблон 8 -->
+                <div class="template-card">
+                    <h4>📢 Маркетинг кампания</h4>
+                    <div class="template-content">
+                        <p><strong>За:</strong> Планиране на маркетинг кампании</p>
+                        <pre class="template-code">Планирай [брой]-седмична маркетинг кампания за [продукт/услуга].
+Целева аудитория: [описание]
+Бюджет: [бюджет]
+Включи:
+- Цели на кампанията
+- Ключови съобщения
+- Канали за разпространение
+- График на дейностите
+- Метрики за успех</pre>
+                        <button class="copy-btn" data-template="business2">📋 Копирай</button>
+                    </div>
+                </div>
+                
+                <!-- Шаблон 9 -->
+                <div class="template-card">
+                    <h4>📧 Професионален имейл</h4>
+                    <div class="template-content">
+                        <p><strong>За:</strong> Писане на бизнес имейли</p>
+                        <pre class="template-code">Напиши професионален имейл за [цел на имейла].
+Тон: [формален/полуформален/приятелски]
+Получател: [описание на получателя]
+Ключови точки за включване:
+1. [точка 1]
+2. [точка 2]
+3. [точка 3]
+Завърши с ясно искане за действие.</pre>
+                        <button class="copy-btn" data-template="business3">📋 Копирай</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Категория 4: Творчески шаблони -->
+        <section class="section fade-in" id="creative">
+            <h2>🎨 Творчески шаблони</h2>
+            <p>За писатели, дизайнери и създатели на съдържание.</p>
+            
+            <div class="templates-grid">
+                <!-- Шаблон 10 -->
+                <div class="template-card">
+                    <h4>📖 Разработка на история</h4>
+                    <div class="template-content">
+                        <p><strong>За:</strong> Създаване на сюжети и персонажи</p>
+                        <pre class="template-code">Разработи история в жанр [жанр] със следните елементи:
+Протагонист: [описание]
+Антагонист: [описание]
+Конфликт: [описание]
+Настройка: [време и място]
+Създай:
+1. Сюжетна линия на 5 точки
+2. Развитие на персонажите
+3. Ключови сцени
+4. Развръзка и заключение</pre>
+                        <button class="copy-btn" data-template="creative1">📋 Копирай</button>
+                    </div>
+                </div>
+                
+                <!-- Шаблон 11 -->
+                <div class="template-card">
+                    <h4>🎭 Диалог между герои</h4>
+                    <div class="template-content">
+                        <p><strong>За:</strong> Създаване на реалистични диалози</p>
+                        <pre class="template-code">Напиши диалог между [герой А] и [герой Б].
+Ситуация: [описание на ситуацията]
+Характеристики на героите:
+- Герой А: [характеристики]
+- Герой Б: [характеристики]
+Цел на диалога: [цел]
+Дължина: приблизително [брой] реплики за всеки герой.</pre>
+                        <button class="copy-btn" data-template="creative2">📋 Копирай</button>
+                    </div>
+                </div>
+                
+                <!-- Шаблон 12 -->
+                <div class="template-card">
+                    <h4>📱 Съдържание за социални мрежи</h4>
+                    <div class="template-content">
+                        <p><strong>За:</strong> Създаване на постове</p>
+                        <pre class="template-code">Създай [брой] публикации за [платформа] на тема "[тема]".
+Тон: [образователен/развлекателен/вдъхновяващ]
+Целева аудитория: [описание]
+За всяка публикация включи:
+- Основен текст (макс. [брой] знака)
+- 5 подходящи хаштага
+- Призив за действие
+- Предложение за визуален контент</pre>
+                        <button class="copy-btn" data-template="creative3">📋 Копирай</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Категория 5: Технически шаблони -->
+        <section class="section fade-in" id="technical">
+            <h2>💻 Технически шаблони</h2>
+            <p>За програмисти, разработчици и технически специалисти.</p>
+            
+            <div class="templates-grid">
+                <!-- Шаблон 13 -->
+                <div class="template-card">
+                    <h4>🖥️ Създаване на код</h4>
+                    <div class="template-content">
+                        <p><strong>За:</strong> Писане и обяснение на код</p>
+                        <pre class="template-code">Напиши [език за програмиране] функция/клас/скрипт, който [описание на функционалността].
+Изисквания:
+- Използвай [библиотека/фреймуърк] ако е нужно
+- Добави подробни коментари
+- Включи обработка на грешки
+- Тествай с [тип на тестовете]
+Предостави и кратко обяснение как работи кодът.</pre>
+                        <button class="copy-btn" data-template="tech1">📋 Копирай</button>
+                    </div>
+                </div>
+                
+                <!-- Шаблон 14 -->
+                <div class="template-card">
+                    <h4>🐞 Отстраняване на грешки</h4>
+                    <div class="template-content">
+                        <p><strong>За:</strong> Намиране и поправяне на грешки</p>
+                        <pre class="template-code">Помогни ми да отстраня следната грешка в [език/технология]:
+Грешка/съобщение: [копирай грешката]
+Кодът (ако е приложимо): [постави кода]
+Опитвам се да: [описание на целта]
+Вече опитах: [списък с опити за решение]
+Моля, предостави:
+1. Анализ на проблема
+2. Възможни причини
+3. Стъпки за решение
+4. Препоръки за предотвратяване в бъдеще</pre>
+                        <button class="copy-btn" data-template="tech2">📋 Копирай</button>
+                    </div>
+                </div>
+                
+                <!-- Шаблон 15 -->
+                <div class="template-card">
+                    <h4>📄 Техническа документация</h4>
+                    <div class="template-content">
+                        <p><strong>За:</strong> Създаване на документация</p>
+                        <pre class="template-code">Създай техническа документация за [продукт/функция/API].
+Документацията трябва да включва:
+1. Преглед и цели
+2. Инсталация/настройка
+3. Основна функционалност с примери
+4. API референция (ако е приложимо)
+5. Често задавани въпроси (FAQ)
+6. Известни проблеми и решения
+Тон: ясен, точен, подходящ за [ниво на потребителите].</pre>
+                        <button class="copy-btn" data-template="tech3">📋 Копирай</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Как да използвате секция -->
+        <section class="section fade-in">
+            <h2>🚀 Как да използвате тези шаблони ефективно</h2>
+            <div class="tip">
+                <div class="usage-tips">
+                    <h3>💡 Съвети:</h3>
+                    <ol>
+                        <li><strong>Персонализирайте</strong> - Заменете текста в [скоби] с вашата информация</li>
+                        <li><strong>Комбинирайте</strong> - Вземете части от различни шаблони</li>
+                        <li><strong>Итеративно подобрявайте</strong> - Задавайте последващи въпроси за прецизиране</li>
+                        <li><strong>Запазвайте</strong> - Създайте ваша библиотека с персонализирани шаблони</li>
+                    </ol>
+                </div>
+                
+                <div style="margin-top: 20px;">
+                    <a href="prompt-builder.html" class="primary-btn">
+                        🏗️ Създайте собствен шаблон
+                    </a>
+                    <a href="practice.html" class="secondary-btn" style="margin-left: 10px;">
+                        🧪 Упражнете с шаблони
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Секция за коментари (добави я тук преди футъра) -->
+        <section class="section fade-in" style="margin-top: 40px;">
+            <h2>💬 Споделете вашите шаблони</h2>
+            <p>Имате ли полезни шаблони? Споделете ги тук!</p>
+            
+            <div class="comment-form" style="background: #f9f9f9; padding: 20px; border-radius: 10px; margin: 20px 0;">
+                <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 15px; margin-bottom: 15px;">
+                    <div>
+                        <label for="commentName" style="display: block; margin-bottom: 5px; font-weight: 500;">Име (по избор):</label>
+                        <input type="text" id="commentName" placeholder="Вашето име" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                    </div>
+                    <div>
+                        <label for="commentText" style="display: block; margin-bottom: 5px; font-weight: 500;">Вашият шаблон:*</label>
+                        <textarea id="commentText" placeholder="Споделете вашия шаблон тук..." rows="4" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; resize: vertical;"></textarea>
+                    </div>
+                </div>
+                
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div style="font-size: 0.9em; color: #666;">
+                        ⓘ Шаблоните се запазват локално във вашия браузър
+                    </div>
+                    <button id="submitComment" class="primary-btn" style="padding: 10px 25px;">
+                        📤 Сподели шаблон
+                    </button>
+                </div>
+            </div>
+            
+            <div id="commentsContainer">
+                <!-- Коментарите ще се появят тук -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Футър (добави брояча тук) -->
+    <footer>
+        <div class="container">
+            <p>AI Комуникационен Гид &copy; 2024</p>
+            <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.7;">
+                Работи офлайн • Може да се инсталира като приложение • Безплатно завинаги
+            </p>
+            
+            <!-- Брояч за посещения -->
+            <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.1);">
+                <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; font-size: 0.85em; opacity: 0.8;">
+                    <div>
+                        👁️ Тази страница: <span id="visitCount" style="font-weight: bold;">0</span> посещения
+                    </div>
+                    <div>
+                        🌐 Целият сайт: <span id="totalVisits" style="font-weight: bold;">0</span> посещения
+                    </div>
+                </div>
+                <p style="margin-top: 10px; font-size: 0.8em; opacity: 0.6;">
+                    Статистиката се запазва локално във вашия браузър
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript за шаблоните -->
+    <script>
+        // Копиране на шаблони
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.copy-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const templateContent = this.parentElement.querySelector('.template-code').textContent;
+                    navigator.clipboard.writeText(templateContent).then(() => {
+                        const originalText = this.textContent;
+                        this.textContent = '✅ Копиран!';
+                        this.style.background = 'var(--success-color)';
+                        this.style.color = 'white';
+                        
+                        setTimeout(() => {
+                            this.textContent = originalText;
+                            this.style.background = '';
+                            this.style.color = '';
+                        }, 2000);
+                    });
+                });
+            });
+            
+            // Филтриране на шаблони (бъдеща функционалност)
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            filterButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const category = this.getAttribute('data-category');
+                    // Имплементация на филтриране...
+                });
+            });
+            
+            // Навигация
+            const menuToggle = document.getElementById('menuToggle');
+            const navLinks = document.getElementById('navLinks');
+            if (menuToggle && navLinks) {
+                menuToggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    navLinks.classList.toggle('active');
+                    menuToggle.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+    
+    <!-- Брояч за посещения -->
+    <script>
+    (function() {
+        const currentPage = window.location.pathname.split('/').pop() || 'templates.html';
+        let pageVisits = JSON.parse(localStorage.getItem('aiGuidePageVisits') || '{}');
+        
+        if (!pageVisits[currentPage]) pageVisits[currentPage] = 0;
+        pageVisits[currentPage]++;
+        
+        localStorage.setItem('aiGuidePageVisits', JSON.stringify(pageVisits));
+        
+        const visitElement = document.getElementById('visitCount');
+        if (visitElement) visitElement.textContent = pageVisits[currentPage];
+        
+        const totalVisits = Object.values(pageVisits).reduce((a, b) => a + b, 0);
+        const totalElement = document.getElementById('totalVisits');
+        if (totalElement) totalElement.textContent = totalVisits;
+    })();
+    </script>
+    
+    <!-- Система за коментари -->
+    <script src="comments.js"></script>
+    
+    <!-- Тъмен режим -->
+    <script>
+    (function() {
+        const themeToggle = document.createElement('div');
+        themeToggle.className = 'theme-toggle';
+        themeToggle.innerHTML = `
+            <button class="toggle-btn" id="themeToggleBtn" title="Превключи тъмен/светъл режим">
+                🌓
+            </button>
+        `;
+        document.body.appendChild(themeToggle);
+        
+        const toggleButton = document.getElementById('themeToggleBtn');
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
+        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+            document.body.classList.add('dark-mode');
+            toggleButton.textContent = '🌞';
+        } else if (savedTheme === 'light') {
+            document.body.classList.add('light-mode');
+            toggleButton.textContent = '🌙';
+        }
+        
+        toggleButton.addEventListener('click', () => {
+            const isDark = document.body.classList.contains('dark-mode');
+            const isLight = document.body.classList.contains('light-mode');
+            
+            toggleButton.classList.add('rotating');
+            setTimeout(() => toggleButton.classList.remove('rotating'), 500);
+            
+            if (isDark) {
+                document.body.classList.remove('dark-mode');
+                document.body.classList.add('light-mode');
+                toggleButton.textContent = '🌙';
+                localStorage.setItem('theme', 'light');
+            } else if (isLight) {
+                document.body.classList.remove('light-mode');
+                toggleButton.textContent = '🌓';
+                localStorage.setItem('theme', 'auto');
+            } else {
+                document.body.classList.add('dark-mode');
+                toggleButton.textContent = '🌞';
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+    })();
+    </script>
+</body>
+</html>
