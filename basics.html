@@ -198,7 +198,7 @@
     <!-- Футър -->
     <footer>
         <div class="container">
-            <p>Запомнете: AI е като лущен инструмент - колкото по-добре го контролирате, толкова по-добри резултати получавате.</p>
+            <p>Запомнете: AI е като мощен инструмент - колкото по-добре го контролирате, толкова по-добри резултати получавате.</p>
             <div class="footer-features">
                 <span>🎯 Конкретност</span>
                 <span>📋 Контекст</span>
@@ -208,8 +208,26 @@
             <p style="margin-top: 20px; font-size: 0.9em; opacity: 0.7;">
                 Върнете се към <a href="index.html" style="color: var(--primary-color);">Начало</a> или продължете към <a href="practice.html" style="color: var(--primary-color);">Упражнения</a>.
             </p>
+       <footer>
+    <div class="container">
+        <!-- Останалия съдържание... -->
+        
+        <!-- ДОБАВИ ТОВА: -->
+        <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.1);">
+            <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; font-size: 0.85em; opacity: 0.8;">
+                <div>
+                    👁️ Тази страница: <span id="visitCount" style="font-weight: bold;">0</span> посещения
+                </div>
+                <div>
+                    🌐 Целият сайт: <span id="totalVisits" style="font-weight: bold;">0</span> посещения
+                </div>
+            </div>
+            <p style="margin-top: 10px; font-size: 0.8em; opacity: 0.6;">
+                Статистиката се запазва локално във вашия браузър
+            </p>
         </div>
-    </footer>
+    </div>
+       </footer>
 
     <!-- Тъмен режим бутон -->
     <div class="theme-toggle">
@@ -337,5 +355,43 @@
             }
         }
     </style>
+<!-- Брояч за посещения - добави във футъра -->
+<script>
+// Брояч за посещения на страница
+(function() {
+    // Име на текущата страница
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    
+    // Взимане на текущите посещения от localStorage
+    let pageVisits = JSON.parse(localStorage.getItem('aiGuidePageVisits') || '{}');
+    
+    // Инициализиране, ако страницата не съществува
+    if (!pageVisits[currentPage]) {
+        pageVisits[currentPage] = 0;
+    }
+    
+    // Увеличаване на брояча
+    pageVisits[currentPage]++;
+    
+    // Запазване обратно в localStorage
+    localStorage.setItem('aiGuidePageVisits', JSON.stringify(pageVisits));
+    
+    // Показване на брояча (ако има елемент с id "visitCount")
+    const visitElement = document.getElementById('visitCount');
+    if (visitElement) {
+        visitElement.textContent = pageVisits[currentPage];
+    }
+    
+    // Също може да покаже общ брой посещения за целия сайт
+    const totalVisits = Object.values(pageVisits).reduce((a, b) => a + b, 0);
+    const totalElement = document.getElementById('totalVisits');
+    if (totalElement) {
+        totalElement.textContent = totalVisits;
+    }
+    
+    console.log(`Тази страница е посетена ${pageVisits[currentPage]} пъти`);
+    console.log(`Общо посещения на сайта: ${totalVisits}`);
+})();
+</script>
 </body>
 </html>
