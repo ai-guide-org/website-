@@ -200,7 +200,49 @@
                 </div>
             </div>
         </div>
+   <!-- Секция за коментари -->
+<section class="section fade-in" style="margin-top: 40px;">
+    <h2>💬 Коментари и дискусия</h2>
+    <p>Споделете вашият опит, задайте въпрос или дайте обратна връзка:</p>
+    
+    <div class="comment-form" style="background: #f9f9f9; padding: 20px; border-radius: 10px; margin: 20px 0;">
+        <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 15px; margin-bottom: 15px;">
+            <div>
+                <label for="commentName" style="display: block; margin-bottom: 5px; font-weight: 500;">Име (по избор):</label>
+                <input type="text" id="commentName" placeholder="Вашето име" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+            </div>
+            <div>
+                <label for="commentText" style="display: block; margin-bottom: 5px; font-weight: 500;">Коментар:*</label>
+                <textarea id="commentText" placeholder="Напишете вашия коментар тук..." rows="3" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; resize: vertical;"></textarea>
+            </div>
+        </div>
+        
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="font-size: 0.9em; color: #666;">
+                ⓘ Коментарите се запазват локално във вашия браузър
+            </div>
+            <button id="submitComment" class="primary-btn" style="padding: 10px 25px;">
+                📤 Публикувай коментар
+            </button>
+        </div>
     </div>
+    
+    <!-- Контейнер за коментарите -->
+    <div id="commentsContainer">
+        <!-- Коментарите ще се появят тук -->
+    </div>
+    
+    <div style="margin-top: 20px; padding: 15px; background: #f0f9ff; border-radius: 8px; border-left: 4px solid var(--info-color);">
+        <p><strong>💡 Как работи системата:</strong></p>
+        <ul style="margin: 10px 0; padding-left: 20px;">
+            <li>Коментарите се запазват във вашия браузър (localStorage)</li>
+            <li>Те са видими само за вас на този компютър/устройство</li>
+            <li>Може да получите автоматичен отговор от системата</li>
+            <li>Няма регистрация или лични данни</li>
+        </ul>
+    </div>
+</section>
+</div>
 
     <footer>
         <div class="container">
@@ -546,5 +588,7 @@
     console.log(`Общо посещения на сайта: ${totalVisits}`);
 })();
 </script>
+<!-- Включване на системата за коментари -->
+<script src="comments.js"></script>
 </body>
 </html>
