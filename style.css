@@ -797,3 +797,42 @@ footer {
 .dark-mode .tip-card {
     background: #2d2d2d;
   }
+/* ====== FIX FOR LONG TEXT BUTTONS ====== */
+.secondary-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    text-align: center !important;
+    gap: 8px !important;
+    padding: 12px 20px !important;
+    min-height: 44px !important;
+    white-space: normal !important;
+}
+
+.secondary-btn span {
+    display: inline-block !important;
+    line-height: 1.4 !important;
+    word-wrap: break-word !important;
+    word-break: break-word !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+}
+
+/* Ако има само един span (без иконка) */
+.secondary-btn span:only-child {
+    display: block !important;
+    width: 100% !important;
+}
+
+/* Ако има два span елемента (иконка + текст) */
+.secondary-btn span:first-child:not(:only-child) {
+    flex-shrink: 0 !important;
+    margin-right: 5px !important;
+}
+
+.secondary-btn span:nth-child(2) {
+    flex: 1 !important;
+    min-width: 0 !important;
+    text-align: center !important;
+}
