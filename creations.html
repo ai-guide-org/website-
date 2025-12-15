@@ -25,7 +25,27 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 </head>
-<body>
+<!-- ВМЕСТО СЕГАШНАТА НАВИГАЦИЯ, ИЗПОЛЗВАЙ ТВОЯТА СТАНДАРТНА -->
+<nav class="main-nav">
+    <div class="container">
+        <div class="nav-brand">
+            <a href="index.html" class="logo">🤖 AI Guide</a>
+        </div>
+        
+        <button class="menu-toggle" id="menuToggle">
+            <span class="hamburger"></span>
+        </button>
+        
+        <div class="nav-links" id="navLinks">
+            <a href="index.html" class="nav-link">🏠 Начало</a>
+            <a href="basics.html" class="nav-link">📚 Ръководство</a>
+            <a href="templates.html" class="nav-link">📋 Шаблони</a>
+            <a href="resources.html" class="nav-link">📚 Ресурси</a>
+            <a href="creations.html" class="nav-link active">🎨 Творения</a>
+        </div>
+    </div>
+</nav>
+    <body>
     <!-- Навигация -->
     <nav class="main-nav" aria-label="Основна навигация">
         <div class="container">
@@ -467,53 +487,316 @@
     </main>
 
     <!-- Футър -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>🎨 AI Творения</h3>
-                    <p>Място за споделяне, вдъхновение и сътрудничество в света на AI.</p>
-                    <div class="footer-stats">
-                        <div class="stat">
-                            <i class="fas fa-project-diagram"></i>
-                            <span id="footerProjectCount">0</span> проекти
-                        </div>
-                        <div class="stat">
-                            <i class="fas fa-users"></i>
-                            <span id="footerUserCount">0</span> участници
-                        </div>
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <!-- Лява колона - AI Творения -->
+            <div class="footer-section">
+                <h3>🤖 AI Guide</h3>
+                <p>Научи се да комуникираш ефективно с AI и сподели какво създаваш!</p>
+                <div class="footer-stats">
+                    <div class="stat">
+                        <i class="fas fa-project-diagram"></i>
+                        <span id="footerProjectCount">0</span> проекти
                     </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Бързи връзки</h3>
-                    <ul>
-                        <li><a href="index.html"><i class="fas fa-home"></i> Начало</a></li>
-                        <li><a href="creations.html"><i class="fas fa-palette"></i> Творения</a></li>
-                        <li><a href="resources.html"><i class="fas fa-book"></i> Ресурси</a></li>
-                        <li><a href="basics.html"><i class="fas fa-graduation-cap"></i> Ръководство</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Свържете се</h3>
-                    <p>Имате идея или въпрос? Пишете ни!</p>
-                    <div class="footer-contact">
-                        <button id="contactBtn" class="contact-btn">
-                            <i class="fas fa-envelope"></i> Свържете се с нас
-                        </button>
+                    <div class="stat">
+                        <i class="fas fa-heart"></i>
+                        <span id="footerLikesCount">0</span> харесвания
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-users"></i>
+                        <span id="footerUserCount">0</span> участници
                     </div>
                 </div>
             </div>
             
-            <div class="footer-bottom">
-                <p>&copy; 2024 AI Guide - Творения. Всички проекти са собственост на техните автори.</p>
-                <p class="footer-note">
-                    <i class="fas fa-info-circle"></i> Този сайт използва локално съхранение. Данните се запазват само във вашия браузър.
-                </p>
+            <!-- Средна колона - Бързи връзки -->
+            <div class="footer-section">
+                <h3>🔗 Навигация</h3>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Начална страница</a></li>
+                    <li><a href="basics.html"><i class="fas fa-graduation-cap"></i> Ръководство</a></li>
+                    <li><a href="templates.html"><i class="fas fa-file-alt"></i> Шаблони</a></li>
+                    <li><a href="creations.html"><i class="fas fa-palette"></i> Творения</a></li>
+                    <li><a href="resources.html"><i class="fas fa-book"></i> Ресурси</a></li>
+                </ul>
+            </div>
+            
+            <!-- Дясна колона - Информация -->
+            <div class="footer-section">
+                <h3>📊 Статистика</h3>
+                <div class="footer-stats-vertical">
+                    <div class="stat-vertical">
+                        <span class="stat-label"><i class="fas fa-eye"></i> Посещения:</span>
+                        <span class="stat-value" id="visitCountFooter">0</span>
+                    </div>
+                    <div class="stat-vertical">
+                        <span class="stat-label"><i class="fas fa-clock"></i> Онлайн:</span>
+                        <span class="stat-value" id="onlineCount">Сега</span>
+                    </div>
+                    <div class="stat-vertical">
+                        <span class="stat-label"><i class="fas fa-calendar"></i> Активност:</span>
+                        <span class="stat-value">От 2024</span>
+                    </div>
+                </div>
+                
+                <div class="footer-contact">
+                    <button id="contactBtn" class="contact-btn">
+                        <i class="fas fa-envelope"></i> Свържи се с нас
+                    </button>
+                </div>
             </div>
         </div>
-    </footer>
+        
+        <!-- Долен раздел -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <div class="copyright">
+                    <p>&copy; 2024 <strong>AI Guide</strong> - Всички права запазени.</p>
+                    <p class="footer-note">
+                        <i class="fas fa-info-circle"></i> Творенията се запазват локално във вашия браузър.
+                    </p>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="index.html" class="footer-link">🏠 Начало</a>
+                    <span class="separator">•</span>
+                    <a href="creations.html" class="footer-link active">🎨 Творения</a>
+                    <span class="separator">•</span>
+                    <a href="resources.html" class="footer-link">📚 Ресурси</a>
+                    <span class="separator">•</span>
+                    <a href="#" onclick="scrollToTop()" class="footer-link">⬆ Нагоре</a>
+                </div>
+                
+                <div class="social-links">
+                    <a href="#" class="social-icon" title="Сподели в Facebook" onclick="shareOnSocial('facebook')">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon" title="Сподели в Twitter" onclick="shareOnSocial('twitter')">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon" title="Копирай връзка" onclick="copyPageLink()">
+                        <i class="fas fa-link"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- JavaScript за футъра -->
+<script>
+// Функции за футъра
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+function shareOnSocial(platform) {
+    const url = encodeURIComponent(window.location.href);
+    const text = encodeURIComponent('Разгледай страхотни AI проекти в AI Guide Творения! 🚀');
+    
+    let shareUrl;
+    
+    switch(platform) {
+        case 'facebook':
+            shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+            break;
+        case 'twitter':
+            shareUrl = `https://twitter.com/intent/tweet?text=${text}&url=${url}`;
+            break;
+    }
+    
+    if (shareUrl) {
+        window.open(shareUrl, '_blank');
+    }
+}
+
+function copyPageLink() {
+    navigator.clipboard.writeText(window.location.href)
+        .then(() => {
+            showFooterMessage('Връзката е копирана в клипборда!');
+        });
+}
+
+function showFooterMessage(text) {
+    // Създаване на временно съобщение
+    const message = document.createElement('div');
+    message.style.cssText = `
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #10b981;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        z-index: 1000;
+        animation: slideInRight 0.3s ease;
+    `;
+    message.textContent = text;
+    document.body.appendChild(message);
+    
+    setTimeout(() => {
+        message.style.animation = 'slideOutRight 0.3s ease';
+        setTimeout(() => message.remove(), 300);
+    }, 2000);
+}
+
+// Актуализиране на статистиката
+function updateFooterStats() {
+    // Проекти
+    const projects = JSON.parse(localStorage.getItem('aiGuideProjects') || '[]');
+    document.getElementById('footerProjectCount').textContent = projects.length;
+    
+    // Харесвания
+    const likes = JSON.parse(localStorage.getItem('aiGuideLikes') || '{}');
+    const totalLikes = Object.values(likes).reduce((sum, count) => sum + count, 0);
+    document.getElementById('footerLikesCount').textContent = totalLikes;
+    
+    // Посещения
+    const pageVisits = JSON.parse(localStorage.getItem('aiGuidePageVisits') || '{}');
+    const currentPage = window.location.pathname.split('/').pop() || 'creations.html';
+    const visits = pageVisits[currentPage] || 0;
+    document.getElementById('visitCountFooter').textContent = visits;
+    
+    // Участници (уникални потребители)
+    const users = JSON.parse(localStorage.getItem('aiGuideUsers') || '{}');
+    const userCount = Object.keys(users).filter(key => key !== 'currentUserId').length;
+    document.getElementById('footerUserCount').textContent = userCount;
+}
+
+// Инициализация при зареждане
+document.addEventListener('DOMContentLoaded', () => {
+    updateFooterStats();
+    
+    // Контакт бутон
+    const contactBtn = document.getElementById('contactBtn');
+    if (contactBtn) {
+        contactBtn.addEventListener('click', () => {
+            // Може да отвори форма за контакт или да препрати към email
+            const email = 'ai-guide@example.com';
+            const subject = 'Въпрос за AI Guide Творения';
+            const body = 'Здравейте,\n\nИмам въпрос/предложение за страницата с AI Творения:\n\n';
+            
+            window.open(`mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`, '_blank');
+        });
+    }
+    
+    // Актуализирай статистиката на всеки 30 секунди
+    setInterval(updateFooterStats, 30000);
+});
+
+// Добавяне на CSS анимации
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes slideInRight {
+        from { transform: translateX(100%); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+    }
+    
+    @keyframes slideOutRight {
+        from { transform: translateX(0); opacity: 1; }
+        to { transform: translateX(100%); opacity: 0; }
+    }
+    
+    .footer-stats-vertical {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 15px;
+    }
+    
+    .stat-vertical {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.9rem;
+    }
+    
+    .stat-label {
+        color: rgba(255, 255, 255, 0.8);
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    .stat-value {
+        color: white;
+        font-weight: 600;
+    }
+    
+    .footer-bottom-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .footer-links {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    
+    .footer-link {
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    
+    .footer-link:hover {
+        color: white;
+    }
+    
+    .footer-link.active {
+        color: #6366f1;
+        font-weight: 500;
+    }
+    
+    .separator {
+        color: rgba(255, 255, 255, 0.5);
+    }
+    
+    .social-links {
+        display: flex;
+        gap: 10px;
+    }
+    
+    .social-icon {
+        width: 35px;
+        height: 35px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-decoration: none;
+        transition: all 0.3s;
+    }
+    
+    .social-icon:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-3px);
+    }
+    
+    @media (max-width: 768px) {
+        .footer-bottom-content {
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        .footer-links {
+            justify-content: center;
+        }
+    }
+`;
+document.head.appendChild(style);
+</script>
 
     <!-- JavaScript за страницата -->
     <script>
