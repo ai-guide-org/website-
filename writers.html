@@ -10,6 +10,50 @@
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#4a6fa5">
+
+    
+     <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ТВОЯТ_КОД"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-ТВОЯТ_КОД', {
+            'anonymize_ip': true, // GDPR friendly
+            'allow_google_signals': false,
+            'allow_ad_personalization_signals': false
+        });
+    </script>
+    
+    <!-- Cookies съгласие (ЗАДЪЛЖИТЕЛНО за GDPR) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (!localStorage.getItem('cookiesAccepted')) {
+                const banner = document.createElement('div');
+                banner.id = 'cookieBanner';
+                banner.innerHTML = `
+                    <div style="position: fixed; bottom: 0; left: 0; right: 0; background: #333; color: white; padding: 15px; text-align: center; z-index: 9999;">
+                        <p>Този сайт използва бисквитки за подобряване на опита. 
+                        <button onclick="acceptCookies()" style="background: #4a6fa5; color: white; border: none; padding: 8px 15px; border-radius: 5px; margin-left: 10px; cursor: pointer;">
+                            Приемам
+                        </button>
+                        <a href="privacy.html" style="color: #4a6fa5; margin-left: 10px;">Поверителност</a></p>
+                    </div>
+                `;
+                document.body.appendChild(banner);
+            }
+            
+            window.acceptCookies = function() {
+                localStorage.setItem('cookiesAccepted', 'true');
+                document.getElementById('cookieBanner').style.display = 'none';
+                // Активиране на Google Analytics след съгласие
+                gtag('consent', 'update', {
+                    'analytics_storage': 'granted'
+                });
+            };
+        });
+    </script>
+</head>
 </head>
 <body>
     <!-- НАВИГАЦИОННО МЕНЮ (същото като в bg.html) -->
