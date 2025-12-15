@@ -1,5 +1,9 @@
 const CACHE_NAME = 'ai-guide-v1.0';
 const urlsToCache = [
+  '/website-/index.html',
+  '/website-/style.css',
+  '/website-/practice.html',
+  '/website-/advanced.html',
   '/ai-guide/',
   '/ai-guide/index.html',
   '/ai-guide/bg.html',
