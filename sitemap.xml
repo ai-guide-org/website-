@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    
+    <!-- Главна страница - ВИСОК ПРИОРИТЕТ -->
+    <url>
+        <loc>https://ai-guide-org.github.io/website-/</loc>
+        <lastmod>2024-01-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.00</priority>
+    </url>
+    
+    <url>
+        <loc>https://ai-guide-org.github.io/website-/index.html</loc>
+        <lastmod>2024-01-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
+    
+    <!-- Страници за ръководство -->
+    <url>
+        <loc>https://ai-guide-org.github.io/website-/basics.html</loc>
+        <lastmod>2024-01-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    
+    <url>
+        <loc>https://ai-guide-org.github.io/website-/templates.html</loc>
+        <lastmod>2024-01-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    
+    <url>
+        <loc>https://ai-guide-org.github.io/website-/advanced.html</loc>
+        <lastmod>2024-01-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    
+    <!-- НОВА страница - AI Творения -->
+    <url>
+        <loc>https://ai-guide-org.github.io/website-/creations.html</loc>
+        <lastmod>2024-01-20</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.90</priority>
+    </url>
+    
+    <!-- Ресурси -->
+    <url>
+        <loc>https://ai-guide-org.github.io/website-/resources.html</loc>
+        <lastmod>2024-01-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    
+    <!-- Специални страници за групи -->
+    <url>
+        <loc>https://ai-guide-org.github.io/website-/programmers.html</loc>
+        <lastmod>2024-01-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.60</priority>
+    </url>
+    
+    <url>
+        <loc>https://ai-guide-org.github.io/website-/writers.html</loc>
+        <lastmod>2024-01-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.60</priority>
+    </url>
+    
+    <url>
+        <loc>https://ai-guide-org.github.io/website-/students.html</loc>
+        <lastmod>2024-01-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.60</priority>
+    </url>
+    
+    <url>
+        <loc>https://ai-guide-org.github.io/website-/business.html</loc>
+        <lastmod>2024-01-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.60</priority>
+    </url>
+    
+    <!-- Инструменти -->
+    <url>
+        <loc>https://ai-guide-org.github.io/website-/prompt-analyzer.html</loc>
+        <lastmod>2024-01-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    
+    <url>
+        <loc>https://ai-guide-org.github.io/website-/prompt-builder.html</loc>
+        <lastmod>2024-01-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    
+    <url>
+        <loc>https://ai-guide-org.github.io/website-/practice.html</loc>
+        <lastmod>2024-01-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+    
+</urlset>
