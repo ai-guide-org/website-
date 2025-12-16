@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🗺️ Карта на сайта - AI Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🗺️</text></svg>">
+</head>
+<body>
+    <!-- Навигация (копирай от index.html) -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html" class="logo">🤖 AI Guide</a>
+            </div>
+            
+            <button class="menu-toggle" id="menuToggle">
+                <span class="hamburger"></span>
+            </button>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">🏠 Начало</a>
+                <a href="basics.html" class="nav-link">📚 Ръководство</a>
+                <a href="templates.html" class="nav-link">📋 Шаблони</a>
+                <a href="creations.html" class="nav-link">🎨 Творения</a>
+                <a href="resources.html" class="nav-link">📚 Ресурси</a>
+                <a href="sitemap.html" class="nav-link active">🗺️ Карта</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Основно съдържание -->
+    <main class="container">
+        <header class="page-header">
+            <h1><i class="fas fa-sitemap"></i> Карта на сайта</h1>
+            <p class="subtitle">Намерете бързо всички страници и ресурси</p>
+        </header>
+
+        <div class="sitemap-container">
+            <!-- Секция 1: Начало -->
+            <div class="sitemap-section">
+                <h2><i class="fas fa-home"></i> Начало</h2>
+                <ul class="sitemap-list">
+                    <li><a href="index.html"><i class="fas fa-arrow-right"></i> Главна страница</a></li>
+                </ul>
+            </div>
+
+            <!-- Секция 2: Ръководство -->
+            <div class="sitemap-section">
+                <h2><i class="fas fa-graduation-cap"></i> Ръководство</h2>
+                <ul class="sitemap-list">
+                    <li><a href="basics.html"><i class="fas fa-arrow-right"></i> 🎯 Основи на комуникацията</a></li>
+                    <li><a href="templates.html"><i class="fas fa-arrow-right"></i> 📋 Шаблони и примери</a></li>
+                    <li><a href="advanced.html"><i class="fas fa-arrow-right"></i> 🚀 Разширени техники</a></li>
+                </ul>
+            </div>
+
+            <!-- Секция 3: За вас -->
+            <div class="sitemap-section">
+                <h2><i class="fas fa-users"></i> За вас</h2>
+                <ul class="sitemap-list">
+                    <li><a href="programmers.html"><i class="fas fa-arrow-right"></i> 💻 За програмисти</a></li>
+                    <li><a href="writers.html"><i class="fas fa-arrow-right"></i> ✍️ За писатели</a></li>
+                    <li><a href="students.html"><i class="fas fa-arrow-right"></i> 🎓 За студенти</a></li>
+                    <li><a href="business.html"><i class="fas fa-arrow-right"></i> 💼 За бизнес</a></li>
+                </ul>
+            </div>
+
+            <!-- Секция 4: Инструменти -->
+            <div class="sitemap-section">
+                <h2><i class="fas fa-tools"></i> Инструменти</h2>
+                <ul class="sitemap-list">
+                    <li><a href="prompt-analyzer.html"><i class="fas fa-arrow-right"></i> 🔍 Анализатор на промптове</a></li>
+                    <li><a href="prompt-builder.html"><i class="fas fa-arrow-right"></i> 🏗️ Създател на промптове</a></li>
+                    <li><a href="practice.html"><i class="fas fa-arrow-right"></i> 🧪 Упражнения</a></li>
+                </ul>
+            </div>
+
+            <!-- Секция 5: Творения -->
+            <div class="sitemap-section highlight">
+                <h2><i class="fas fa-palette"></i> Творения <span class="new-badge">НОВО</span></h2>
+                <ul class="sitemap-list">
+                    <li><a href="creations.html"><i class="fas fa-arrow-right"></i> 🎨 Споделени AI проекти</a></li>
+                </ul>
+                <p class="sitemap-description">Споделете вашите проекти и вдъхновете се от други!</p>
+            </div>
+
+            <!-- Секция 6: Ресурси -->
+            <div class="sitemap-section">
+                <h2><i class="fas fa-book"></i> Ресурси</h2>
+                <ul class="sitemap-list">
+                    <li><a href="resources.html"><i class="fas fa-arrow-right"></i> 📚 Полезни инструменти и материали</a></li>
+                </ul>
+            </div>
+
+            <!-- Секция 7: Технически -->
+            <div class="sitemap-section">
+                <h2><i class="fas fa-cog"></i> Технически</h2>
+                <ul class="sitemap-list">
+                    <li><a href="sitemap.xml"><i class="fas fa-code"></i> XML Sitemap (за търсачки)</a></li>
+                    <li><a href="robots.txt"><i class="fas fa-robot"></i> Robots.txt</a></li>
+                    <li><a href="privacy.html"><i class="fas fa-shield-alt"></i> Поверителност</a></li>
+                    <li><a href="terms.html"><i class="fas fa-file-contract"></i> Условия за ползване</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SEO информация -->
+        <div class="seo-info">
+            <h3><i class="fas fa-search"></i> SEO информация</h3>
+            <div class="seo-stats">
+                <div class="stat">
+                    <div class="stat-number" id="totalPages">12</div>
+                    <div class="stat-label">Страници</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Индексируемо</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Грешки</div>
+                </div>
+            </div>
+            <p class="seo-note">
+                <i class="fas fa-info-circle"></i> Този сайт е оптимизиран за търсачки и използва съвременни SEO практики.
+            </p>
+        </div>
+    </main>
+
+    <!-- Футър (копирай от index.html) -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🤖 AI Guide</h3>
+                    <p>Научи се да комуникираш ефективно с AI</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Бързи връзки</h3>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-home"></i> Начало</a></li>
+                        <li><a href="creations.html"><i class="fas fa-palette"></i> Творения</a></li>
+                        <li><a href="resources.html"><i class="fas fa-book"></i> Ресурси</a></li>
+                        <li><a href="sitemap.html"><i class="fas fa-sitemap"></i> Карта на сайта</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 AI Guide. Всички права запазени.</p>
+                <div class="footer-meta">
+                    <a href="sitemap.html"><i class="fas fa-sitemap"></i> Карта</a>
+                    <span class="separator">•</span>
+                    <a href="privacy.html">Поверителност</a>
+                    <span class="separator">•</span>
+                    <a href="terms.html">Условия</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Навигация
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                menuToggle.classList.toggle('active');
+            });
+        }
+        
+        // Броене на страници
+        const pages = document.querySelectorAll('.sitemap-list a[href$=".html"]');
+        document.getElementById('totalPages').textContent = pages.length;
+    </script>
+
+    <!-- CSS за sitemap страницата -->
+    <style>
+        .sitemap-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .sitemap-section {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .sitemap-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        }
+        
+        .sitemap-section.highlight {
+            border-left: 4px solid var(--primary);
+            background: linear-gradient(135deg, var(--primary-light) 0%, transparent 100%);
+        }
+        
+        .sitemap-section h2 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .new-badge {
+            background: var(--accent);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: bold;
+        }
+        
+        .sitemap-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .sitemap-list li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .sitemap-list a {
+            color: var(--text-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 0;
+            transition: color 0.3s;
+        }
+        
+        .sitemap-list a:hover {
+            color: var(--primary);
+        }
+        
+        .sitemap-description {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-top: 0.5rem;
+            padding-top: 0.5rem;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .seo-info {
+            background: var(--bg-light);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            border: 1px solid var(--border-color);
+        }
+        
+        .seo-stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 1.5rem 0;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        .seo-note {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .footer-meta {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+        
+        .footer-meta a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+        }
+        
+        .footer-meta a:hover {
+            color: white;
+        }
+        
+        .separator {
+            color: rgba(255,255,255,0.5);
+        }
+        
+        @media (max-width: 768px) {
+            .sitemap-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .seo-stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</body>
+  </html>
